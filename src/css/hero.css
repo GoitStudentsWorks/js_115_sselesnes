@@ -32,9 +32,19 @@ h1 {
   letter-spacing: 0.5px;
 }
 .hero-content {
+  /* background-color: gold; */
   margin: 112px 0 72px;
   display: grid;
   gap: 40px;
+  position: relative;
+}
+.hero-bg {
+  top: -96px;
+  right: -8px;
+  height: 685px;
+  filter: blur(3px);
+  position: absolute;
+  z-index: -1;
 }
 .hero-order-btn {
   display: flex;
@@ -69,5 +79,5 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  background: var(--light-grey);
+  background-color: var(--light-grey);
 }
