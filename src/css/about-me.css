@@ -1,0 +1,165 @@
+/* ---------- Мобилка ---------- */
+.about-me {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.about-me_title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.about-me_info {
+  margin-top: 40px;
+}
+
+.about-me_img {
+  border-radius: 16px;
+  width: 320px;
+  height: 374px;
+}
+
+.about-me_info-biography {
+  margin-top: 40px;
+}
+
+.about-me_info-biography-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.about-me_info-biography-text-one {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+  margin-top: 32px;
+}
+
+.about-me_info-biography-text-two {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+  margin-top: 24px;
+}
+
+.about-me_info-education {
+  margin-top: 40px;
+}
+
+.about-me_info-education-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #292929;
+  margin-bottom: 32px;
+}
+
+.about-me_info-education-list {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 32px;
+}
+
+.about-me_info-education-list-item {
+  position: relative;
+}
+
+.about-me_info-education-list-item::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -18px;
+  border-radius: 1px;
+  width: 4px;
+  height: 4px;
+  background-color: #00b068;
+  mask-image: url(/images/about-me/rectangle_x.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: url(/images/about-me/rectangle_x.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+}
+
+.about-me_info-role {
+  margin-top: 40px;
+}
+
+.about-me_info-role-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #292929;
+  margin-bottom: 32px;
+}
+
+.about-me_info-role-list {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 24px;
+}
+
+.about-me_info-role-list-item {
+  position: relative;
+}
+
+.about-me_info-role-list-item::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -14px;
+  border-radius: 1px;
+  width: 4px;
+  height: 4px;
+  background-color: #00b068;
+  mask-image: url(/images/about-me/rectangle_x.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: url(/images/about-me/rectangle_x.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+}
+
+/* ---------- Планшет ---------- */
+@media only screen and (min-width: 768px) {
+  .about-me {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+}
