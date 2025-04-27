@@ -19,9 +19,8 @@
     --color-switch-bg: #E6E6E6;
     --color-switch-dark: #2C2C2C;
     --header-height: 60px;
+    --header-height-tablet: 80px;
     --container-padding: 32px;
-    --scrollbar-width: 17px; /* Приблизна ширина скролбару */
-    --toggle-size: 8px;
     --container-width: 48px;
     --container-height: 24px;
     --container-radius: 24px;
@@ -38,20 +37,6 @@
     --back-clouds-color: #AACADF;
     --transition: .5s cubic-bezier(0, -0.02, 0.4, 1.25);
     --circle-transition: .3s cubic-bezier(0, -0.02, 0.35, 1.17);
-    --toggle-width: 64px;
-    --toggle-height: 32px;
-    --toggle-padding: 2px;
-    --circle-size: 28px;
-    --switch-bg-light: linear-gradient(to right, #80B6DC 0%, #B4D9F5 100%);
-    --switch-bg-dark: linear-gradient(to right, #1F2225 0%, #2C3038 100%);
-    --circle-color-light: #FFD600;
-    --circle-color-dark: #D9D9D9;
-    --duration: 0.3s;
-    --image-brightness: 100%;
-    --gradient-start: #000000;
-    --gradient-end: #FFFFFF;
-    --section-background: #f5f5f5;
-    --card-background: #ffffff;
 }
 
 /* Темна тема */
@@ -63,11 +48,6 @@
     --color-border: #404040;
     --color-switch-bg: #2C2C2C;
     --color-accent: #00B068;
-    --image-brightness: 100%;
-    --gradient-start: #FFFFFF;
-    --gradient-end: #000000;
-    --section-background: #2d2d2d;
-    --card-background: #333333;
 }
 
 /* Базові стилі */
@@ -159,7 +139,8 @@ body.menu-open {
     transition: color 250ms ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: var(--color-accent);
 }
 
@@ -180,13 +161,6 @@ body.menu-open {
     height: var(--container-height);
 }
 
-.theme-switch, .theme-switch *, .theme-switch *::before, .theme-switch *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: var(--toggle-size);
-}
-
 .theme-switch__checkbox {
     display: none;
 }
@@ -202,16 +176,6 @@ body.menu-open {
                 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
     transition: var(--transition);
     position: relative;
-}
-
-.theme-switch__container::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    inset: 0;
-    box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset,
-                0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
-    border-radius: var(--container-radius);
 }
 
 .theme-switch__circle-container {
@@ -342,34 +306,7 @@ body.menu-open {
     opacity: 1;
 }
 
-/* Показати перемикач на десктопі */
-@media screen and (min-width: 768px) {
-    .theme-switch {
-        display: flex;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .theme-switch {
-        display: none;
-    }
-}
-
-/* Мобільні стилі (320px - 359px) */
-@media screen and (min-width: 320px) {
-    .container {
-        width: 100%;
-    }
-}
-
-/* Мобільні стилі (360px - 767px) */
-@media screen and (min-width: 360px) {
-    .container {
-        width: 360px;
-    }
-}
-
-/* Планшетні стилі (768px - 1279px) */
+/* Медіа-запити */
 @media screen and (min-width: 768px) {
     .container {
         width: 768px;
@@ -398,9 +335,12 @@ body.menu-open {
         align-items: center;
         gap: 40px;
     }
+
+    .theme-switch {
+        display: flex;
+    }
 }
 
-/* Десктопні стилі (1280px і більше) */
 @media screen and (min-width: 1280px) {
     .container {
         width: 1280px;
@@ -420,94 +360,14 @@ body.menu-open {
     }
 }
 
-/* Приклад для різних секцій */
-.hero {
-    background-color: var(--color-background);
-    color: var(--color-primary);
-}
-
-.about {
-    background-color: var(--color-background);
-}
-
-.projects {
-    background-color: var(--color-background);
-}
-
-.card {
-    background-color: var(--color-card-bg);
-    border-color: var(--color-border);
-    transition: all 0.3s ease;
-}
-
-.section {
-    background-color: var(--color-background);
-    transition: background-color 0.3s ease;
-}
-
-.text {
-    transition: color 0.3s ease;
-    color: var(--color-text);
-}
-
-/* Для зображень */
-img {
-    filter: brightness(var(--image-brightness));
-}
-
-/* Для іконок */
-.icon {
-    color: var(--color-text);
-    transition: color 0.3s ease;
-}
-
-/* Для градієнтів */
-.gradient {
-    background: linear-gradient(var(--gradient-start), var(--gradient-end));
-}
-
-/* Для відео та iframe */
-video, iframe {
-    background-color: var(--color-background);
-}
-
+/* Стилі для друку */
 @media print {
-    :root {
-        --color-primary: #000000;
-        --color-background: #FFFFFF;
+    .header, .menu-buttons, .theme-switch {
+        display: none;
     }
-}
-
-/* Стилі для тексту */
-h1, h2, h3, h4, h5, h6, p, span, a {
-    color: var(--color-text);
-    transition: color 0.3s ease;
-}
-
-/* Стилі для кнопок */
-.button {
-    background-color: var(--color-card-bg);
-    color: var(--color-text);
-    border-color: var(--color-border);
-    transition: all 0.3s ease;
-}
-
-/* Стилі для форм */
-input, textarea, select {
-    background-color: var(--color-card-bg);
-    color: var(--color-text);
-    border-color: var(--color-border);
-    transition: all 0.3s ease;
-}
-
-/* Стилі для модальних вікон */
-.modal {
-    background-color: var(--color-background);
-    transition: background-color 0.3s ease;
-}
-
-.modal-content {
-    background-color: var(--color-card-bg);
-    border-color: var(--color-border);
-    transition: all 0.3s ease;
+    
+    body {
+        background: white;
+        color: black;
+    }
 } 
