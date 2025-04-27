@@ -1,25 +1,18 @@
-.faq-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 104px;
-  flex-wrap: wrap;
+.container {
+  min-width: 320px;
+  max-width: 360px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
-
-.left-column {
-  max-width: 520px;
-  flex-shrink: 0;
-}
-
 h1 {
+  width: 320px;
   font-family: Impact;
-  font-size: 108px;
+  font-size: 52px;
   font-style: normal;
   font-weight: 400;
-  line-height: 124px;
+  line-height: 1.23;
   letter-spacing: 1.8px;
   text-transform: uppercase;
-  width: 520px;
 }
 
 .highlight {
@@ -27,26 +20,22 @@ h1 {
 }
 
 .container-bg-image {
-  margin-top: 240px;
-  width: 526px;
-  height: 408px;
-  filter: blur(3.70084285736084px);
+  display: none;
 }
-
+/* accordion */
 .accordion-container {
-  margin-top: 276px;
+  margin-top: 40px; /* mobile*/
   flex: 1;
-  width: 592px;
-  height: 744px;
+  width: 320px; /* mobile*/
+  height: auto;
 }
 
 .ac {
   display: flex;
   flex-direction: column;
-  width: 592px;
+  width: 320px; /*mobile*/
   padding: 28px 24px;
-  align-items: center;
-  /* gap: 24px; */
+  align-items: flex-start;
   background-color: transparent;
   transition: background-color 0.3s ease;
   border-radius: 16px;
@@ -54,24 +43,45 @@ h1 {
 }
 
 .ac-header {
-  width: 488px;
-  gap: 24px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
 }
 
 .ac-trigger {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 200px; /*mobile*/
   text-transform: uppercase;
   background: none;
   border: none;
   font-family: Poppins, sans-serif;
-  font-size: 48px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0.5px;
   text-align: left;
   cursor: pointer;
+}
+
+.ac .ac-trigger::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/faq/icons/button-down.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ac.is-active > .ac-header .ac-trigger::after {
+  content: '';
+  background-image: url('../images/faq/icons/button-up.svg');
 }
 
 .ac-text {
@@ -80,7 +90,6 @@ h1 {
   text-align: start;
 }
 
-/* коли відкрито */
 .ac.is-active {
   background-color: #bcdfd1;
 }
@@ -100,22 +109,72 @@ h1 {
   padding-top: 12px;
 }
 
-.ac .ac-trigger::after {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-image: url('../images/faq/icons/button-down.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+/* TABLET */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+  .header-container {
+    max-width: 594px;
+    flex-shrink: 0;
+  }
+  h1 {
+    width: 592px;
+    font-size: 108px;
+    line-height: 1.15;
+  }
+  /* accordion */
+  .accordion-container {
+    margin-top: 60px; /* mobile*/
+    width: 704px; /* mobile*/
+    height: 1120px;
+  }
+
+  .ac {
+    width: 704px; /*mobile*/
+  }
 }
 
-.ac.is-active > .ac-header .ac-trigger::after {
-  content: '';
-  background-image: url('../images/faq/icons/button-up.svg');
+/* DESKTOP */
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 32px;
+  }
+
+  .faq-inner {
+    display: flex;
+    justify-content: flex-start; /* Align children to the left */
+    align-items: flex-start;
+    gap: 104px;
+    flex-wrap: wrap;
+  }
+
+  .header-container {
+    max-width: 520px;
+    flex-shrink: 0;
+  }
+  h1 {
+    width: 520px;
+  }
+
+  .container-bg-image {
+    display: block;
+    margin-top: 240px;
+    width: 526px;
+    height: 408px;
+    filter: blur(3.70084285736084px);
+  }
+
+  /* accordion */
+  .accordion-container {
+    margin-top: 276px; /* mobile*/
+    /* width: 704px; mobile */
+    height: 1020px;
+  }
+
+  .ac {
+    width: 592px; /*mobile*/
+  }
 }
