@@ -2,6 +2,7 @@
   color: initial;
   background-color: initial;
 }
+body,
 body.theme-light {
   background-color: var(--white);
   color: var(--black);
@@ -10,11 +11,16 @@ body.theme-dark {
   background-color: var(--black-dt);
   color: var(--white-dt);
 }
-
-.hero-title span,
-.caption span {
+.accet,
+.accet.theme-light {
   color: var(--accet-green);
+  fill: var(--accet-green);
 }
+.accet.theme-dark {
+  color: var(--accet-green-dt);
+  fill: var(--accet-green-dt);
+}
+
 h1 {
   /* Mobile/h1 -360 */
   font-family: Impact;
@@ -88,13 +94,6 @@ h1 {
   top: 8px;
   left: 4px;
   width: 28px;
-  fill: var(--accet-green);
-}
-body.theme-light .hero-order-btn-text svg {
-  fill: var(--accet-green);
-}
-body.theme-dark .hero-order-btn-text svg {
-  fill: var(--accet-green-dt);
 }
 .hero-order-btn span {
   height: 96px;
