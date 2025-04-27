@@ -34,12 +34,10 @@ h1 {
 .hero-content {
   /* background-color: gold; */
   margin: 112px 0 72px;
-  display: grid;
-  gap: 40px;
-  grid-template-areas:
-    'title'
-    'order'
-    'description';
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   position: relative;
 }
 .hero-bg-d,
@@ -52,17 +50,20 @@ h1 {
   position: absolute;
   z-index: -1;
 }
+.hero-bg-d,
 .hero-bg-t {
   display: none;
 }
+.hero-title {
+  margin-bottom: 40px;
+}
 .hero-order-btn {
-  grid-area: order;
   display: flex;
   align-items: center;
 }
 .hero-order-btn-text {
+  width: 155px;
   padding-left: 44px;
-  width: 48.44%; /* 111+44px */
   text-wrap: nowrap;
   z-index: 1;
   position: relative;
@@ -76,12 +77,17 @@ h1 {
 }
 .hero-order-btn span {
   height: 96px;
+  width: 165px;
   border-radius: 16px;
   background-color: var(--light-accent);
   flex-grow: 1;
 }
 .hero-order-btn:hover span {
   background-color: var(--accet-green);
+}
+.hero-description {
+  grid-area: description;
+  margin-top: 40px;
 }
 .hero-social {
   padding: 32px;
@@ -105,39 +111,64 @@ h1 {
     line-height: 32px;
     letter-spacing: 0.5px;
   }
+  .hero-bg-d,
   .hero-bg-m {
     display: none;
   }
   .hero-bg-t {
     display: block;
-    height: 920px;
+    top: -76px;
+    right: 0px;
+    height: 900px;
   }
   .hero-content {
     margin: 88px 0 80px;
-    gap: 40px;
+  }
+  .hero-title {
+    margin-bottom: 60px;
   }
   .hero-order-btn-text {
     padding-left: 44px;
-    width: 22.018%; /* 111+44px */
   }
   .hero-order-btn {
     justify-content: space-between;
     max-width: 416px;
   }
   .hero-order-btn span {
-    max-width: 261px;
-  }
-  .hero-title {
-    grid-area: title;
-    margin-bottom: 20px;
+    width: 261px;
   }
   .hero-description {
-    grid-area: description;
+    margin-top: 40px;
   }
   .hero-social {
     flex-direction: row;
     justify-content: center;
     padding: 40px;
     gap: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-bg-m,
+  .hero-bg-t {
+    display: none;
+  }
+  .hero-bg-d {
+    /* background-color: aqua; */
+    display: block;
+    top: -176px;
+    height: 788px;
+  }
+  .hero-content {
+    margin: 184px 0 132px;
+  }
+  .hero-title {
+    margin-bottom: 80px;
+  }
+  .hero-order-btn {
+    margin-left: 72px;
+  }
+  .hero-description {
+    margin-top: 0px;
+    width: 592px;
   }
 }
