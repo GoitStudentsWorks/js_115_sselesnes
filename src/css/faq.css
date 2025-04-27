@@ -1,3 +1,4 @@
+/*MOBILE*/
 .container {
   min-width: 320px;
   max-width: 360px;
@@ -13,6 +14,7 @@ h1 {
   line-height: 1.23;
   letter-spacing: 1.8px;
   text-transform: uppercase;
+  color: var(--Black, #292929);
 }
 
 .highlight {
@@ -24,16 +26,16 @@ h1 {
 }
 /* accordion */
 .accordion-container {
-  margin-top: 40px; /* mobile*/
+  margin-top: 40px;
   flex: 1;
-  width: 320px; /* mobile*/
+  width: 320px;
   height: auto;
 }
 
 .ac {
   display: flex;
   flex-direction: column;
-  width: 320px; /*mobile*/
+  width: 320px;
   padding: 28px 24px;
   align-items: flex-start;
   background-color: transparent;
@@ -45,23 +47,28 @@ h1 {
 .ac-header {
   display: flex;
   width: 100%;
+
   justify-content: flex-start;
 }
 
 .ac-trigger {
   position: relative;
   overflow: hidden;
-  width: 200px; /*mobile*/
+  max-width: 250px;
+  padding-right: 16px;
+
   text-transform: uppercase;
   background: none;
   border: none;
   font-family: Poppins, sans-serif;
+  color: var(--Black, #292929);
   font-size: 18px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 28px;
   letter-spacing: 0.5px;
   text-align: left;
   cursor: pointer;
+  word-break: break-word;
 }
 
 .ac .ac-trigger::after {
@@ -91,11 +98,11 @@ h1 {
 }
 
 .ac.is-active {
-  background-color: #bcdfd1;
+  background-color: var(--light-accent, #bcdfd1);
 }
 
 .ac.is-active .ac-trigger {
-  color: #00b068;
+  color: var(--Accet-green, #00b068);
 }
 
 .ac-panel {
@@ -113,7 +120,6 @@ h1 {
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding: 0 32px;
   }
   .header-container {
     max-width: 594px;
@@ -126,26 +132,29 @@ h1 {
   }
   /* accordion */
   .accordion-container {
-    margin-top: 60px; /* mobile*/
-    width: 704px; /* mobile*/
-    height: 1120px;
+    margin-top: 60px;
+    width: 704px;
+    height: auto;
   }
 
   .ac {
-    width: 704px; /*mobile*/
+    width: 704px;
   }
+}
+
+.ac-trigger {
+  max-width: 600px;
 }
 
 /* DESKTOP */
 @media only screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
-    padding: 0 32px;
   }
 
   .faq-inner {
     display: flex;
-    justify-content: flex-start; /* Align children to the left */
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 104px;
     flex-wrap: wrap;
@@ -169,12 +178,11 @@ h1 {
 
   /* accordion */
   .accordion-container {
-    margin-top: 276px; /* mobile*/
-    /* width: 704px; mobile */
-    height: 1020px;
+    margin-top: 276px;
+    height: auto;
   }
 
   .ac {
-    width: 592px; /*mobile*/
+    width: 592px;
   }
 }
