@@ -36,7 +36,7 @@ body {
   
    
     padding-left: 100%;
-    animation: marqueeLine 15s linear infinite;
+    animation: marqueeLine 25s linear infinite;
 }
 
 .marquee-inner-rotate {
@@ -48,7 +48,7 @@ body {
     background: var(--Light-grey, #E4E5E6);
 
     padding-left: 100%;
-    animation: marqueeLine 15s linear infinite;
+    animation: marqueeLine 25s linear infinite;
 }
 
 .marquee-line {
