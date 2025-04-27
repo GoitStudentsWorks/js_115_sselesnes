@@ -1,3 +1,16 @@
+:root {
+  color: initial;
+  background-color: initial;
+}
+body.theme-light {
+  background-color: var(--white);
+  color: var(--black);
+}
+body.theme-dark {
+  background-color: var(--black-dt);
+  color: var(--white-dt);
+}
+
 .hero-title span,
 .caption span {
   color: var(--accet-green);
@@ -32,7 +45,6 @@ h1 {
   letter-spacing: 0.5px;
 }
 .hero-content {
-  /* background-color: gold; */
   margin: 112px 0 72px;
   display: flex;
   flex-direction: row;
@@ -78,15 +90,33 @@ h1 {
   width: 28px;
   fill: var(--accet-green);
 }
+body.theme-light .hero-order-btn-text svg {
+  fill: var(--accet-green);
+}
+body.theme-dark .hero-order-btn-text svg {
+  fill: var(--accet-green-dt);
+}
 .hero-order-btn span {
   height: 96px;
   width: 165px;
   border-radius: 16px;
-  background-color: var(--light-accent);
   flex-grow: 1;
+  background-color: var(--light-accent);
 }
 .hero-order-btn:hover span {
   background-color: var(--accet-green);
+}
+body.theme-light .hero-order-btn span {
+  background-color: var(--light-accent);
+}
+body.theme-light .hero-order-btn:hover span {
+  background-color: var(--accet-green);
+}
+body.theme-dark .hero-order-btn span {
+  background-color: var(--hover);
+}
+body.theme-dark .hero-order-btn:hover span {
+  background-color: var(--accet-green-dt);
 }
 .hero-description {
   grid-area: description;
@@ -99,6 +129,12 @@ h1 {
   align-items: center;
   gap: 24px;
   background-color: var(--light-grey);
+}
+body.theme-light .hero-social {
+  background-color: var(--light-grey);
+}
+body.theme-dark .hero-social {
+  background-color: var(--charcoal-dt);
 }
 
 @media screen and (min-width: 768px) {
@@ -156,7 +192,6 @@ h1 {
     display: none;
   }
   .hero-bg-d {
-    /* background-color: aqua; */
     display: block;
     top: -176px;
     height: 788px;
