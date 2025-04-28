@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeSwitch = document.querySelector('.theme-switch__checkbox');
     const html = document.documentElement;
-    const body = document.body;
     
     if (!themeSwitch) {
         console.warn('Theme switch element not found');
@@ -13,24 +12,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         
         const setTheme = (isDark) => {
-            html.setAttribute('data-theme', isDark ? 'dark' : 'light');
-            themeSwitch.checked = isDark;
-            body.style.backgroundColor = isDark ? '#1a1a1a' : '#FFFFFF';
-            body.style.color = isDark ? '#FFFFFF' : '#333333';
+            try {
+                html.setAttribute('data-theme', isDark ? 'dark' : 'light');
+                themeSwitch.checked = isDark;
+            } catch (error) {
+                console.error('Error setting theme:', error);
+            }
         };
 
         setTheme(savedTheme === 'dark' || (!savedTheme && prefersDark));
 
         themeSwitch.addEventListener('change', () => {
-            const isDark = themeSwitch.checked;
-            setTheme(isDark);
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            try {
+                const isDark = themeSwitch.checked;
+                setTheme(isDark);
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            } catch (error) {
+                console.error('Error changing theme:', error);
+            }
         });
 
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
         mediaQuery.addEventListener('change', (e) => {
-            if (!localStorage.getItem('theme')) {
-                setTheme(e.matches);
+            try {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches);
+                }
+            } catch (error) {
+                console.error('Error handling system theme change:', error);
             }
         });
 
