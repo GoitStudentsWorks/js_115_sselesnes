@@ -162,7 +162,7 @@
   }
   .benefits-decor {
     filter: blur(3.70084285736084px);
-    fill: var(--color-accet);
+    fill: var(--accet-green);
     position: absolute;
     top: -111px;
     right: 35px;
