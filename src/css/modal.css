@@ -53,14 +53,13 @@
     overflow: hidden;
 }
 
+/* Particles Container */
 #particles-js {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: 0;
     background-color: var(--color-background);
+    pointer-events: none;
 }
 
 .mobile-menu.is-open {
@@ -141,20 +140,6 @@ body.menu-open .burger-menu {
 body.menu-open .mobile-close {
     display: flex;
 }
-
-/* Decor Elements */
-.mobile-menu .decor {
-    position: absolute;
-    fill: var(--accet-green);
-    opacity: 0.4;
-    transition: transform 0.3s ease;
-}
-
-.mobile-menu .decor-1 { top: 15%; left: 20%; }
-.mobile-menu .decor-2 { top: 35%; right: 15%; }
-.mobile-menu .decor-3 { bottom: 25%; left: 25%; }
-.mobile-menu .decor-4 { top: 45%; left: 65%; }
-.mobile-menu .decor-5 { bottom: 35%; right: 30%; }
 
 /* Set animation delays for each item */
 .mobile-menu .nav-item:nth-child(1) { --item-index: 1; }

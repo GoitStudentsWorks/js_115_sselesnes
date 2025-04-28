@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Скидання стилів */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Змінні */
 :root {
     --color-primary: #000000;
@@ -50,30 +43,6 @@
     --color-accent: #00B068;
 }
 
-/* Базові стилі */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--color-background);
-    min-width: 320px;
-    transition: all 0.3s ease;
-    color: var(--color-text);
-}
-
-body.menu-open {
-    overflow: hidden;
-}
-
-/* Контейнер */
-.container {
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 var(--container-padding);
-    max-width: 1280px;
-}
-
 /* Шапка */
 .header {
     position: fixed;
@@ -84,6 +53,16 @@ body.menu-open {
     background-color: var(--color-background);
     z-index: 100;
     transition: background-color 0.3s ease;
+}
+
+.header-container {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--container-padding);
+    max-width: 1280px;
 }
 
 .header-left {
@@ -271,7 +250,7 @@ body.menu-open {
                 3.375em -0.437em var(--back-clouds-color),
                 4.625em -1.75em 0 0.437em var(--clouds-color),
                 4em -0.625em var(--back-clouds-color),
-                4.125em -2.125em 0 0.437em var(--back-clouds-color);
+                4.125em -2.125em 0 0.437em var(--clouds-color);
     transition: var(--transition);
 }
 
@@ -308,7 +287,7 @@ body.menu-open {
 
 /* Медіа-запити */
 @media screen and (min-width: 768px) {
-    .container {
+    .header-container {
         width: 768px;
         padding: 0 32px;
     }
@@ -317,7 +296,7 @@ body.menu-open {
         height: var(--header-height-tablet);
     }
 
-    .header .container {
+    .header-container {
         padding-top: 24px;
         padding-bottom: 24px;
     }
@@ -342,7 +321,7 @@ body.menu-open {
 }
 
 @media screen and (min-width: 1280px) {
-    .container {
+    .header-container {
         width: 1280px;
         padding: 0 100px;
     }
@@ -364,10 +343,5 @@ body.menu-open {
 @media print {
     .header, .menu-buttons, .theme-switch {
         display: none;
-    }
-    
-    body {
-        background: white;
-        color: black;
     }
 } 
