@@ -23,7 +23,7 @@
   color: #00b068;
 }
 .decor-hidden {
-  display: none;
+  visibility: hidden;
 }
 .benefits-list {
   display: flex;
@@ -116,7 +116,7 @@
     right: 0px;
   }
   .decor-hidden {
-    display: flex;
+    visibility: visible;
   }
   .benefits {
     margin: 164px 0;
