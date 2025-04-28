@@ -53,11 +53,12 @@
     gap: 16px;
     background: var(--Light-accent, #BCDFD1);
     cursor: pointer;
+    animation-direction: normal;
     
     animation: marqueeLine 15s linear infinite;
 }
 
-[data-theme='dark'].marquee-inner {
+[data-theme='dark'] .marquee-inner {
     background: var(--dark-accet-dt);
 }
 
@@ -81,12 +82,13 @@
     gap: 16px;
     background: var(--Light-grey, #E4E5E6);
     cursor: pointer;
+    animation-direction: normal;
 
     animation: marqueeLine 15s linear infinite;
 }
 
-[data-theme='dark'].marquee-inner-rotate {
-    background: var(--charcoat-dt);
+[data-theme='dark'] .marquee-inner-rotate {
+    background: var(--charcoal-dt);
 }
 
 @media only screen and (min-width: 360px) and (max-width: 1279px) {
@@ -122,7 +124,7 @@
     animation-name: marqueeLine;
 }
 
-[data-theme='dark'].marquee-line {
+[data-theme='dark'] .marquee-line {
     color: var(--white-dt);
 }
 
@@ -154,7 +156,7 @@
     white-space: nowrap;
 }
 
-[data-theme='dark'].marquee-line-rotate {
+[data-theme='dark'] .marquee-line-rotate {
     color: var(--accet-green-dt);
 }
 
@@ -180,7 +182,7 @@
     background: var(--Accet-green, #00B068);
 }
 
-[data-theme='dark'].marquee-dot {
+[data-theme='dark'] .marquee-dot {
     background: var(--accet-green-dt);
 }
 
@@ -192,7 +194,7 @@
     background: var(--Black, #292929);
 }
 
-[data-theme='dark'].marquee-dot-rotate {
+[data-theme='dark'] .marquee-dot-rotate {
     background: var(--white-dt);
 }
 
