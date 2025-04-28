@@ -1,22 +1,12 @@
-:root {
+/* :root {
   color: initial;
   background-color: initial;
-}
-body,
-body.theme-light {
-  background-color: var(--white);
-  color: var(--black);
-}
-body.theme-dark {
-  background-color: var(--black-dt);
-  color: var(--white-dt);
-}
-.accet,
-.accet.theme-light {
+} */
+.accet {
   color: var(--accet-green);
   fill: var(--accet-green);
 }
-.accet.theme-dark {
+[data-theme='dark'] .accet {
   color: var(--accet-green-dt);
   fill: var(--accet-green-dt);
 }
@@ -105,16 +95,10 @@ h1 {
 .hero-order-btn:hover span {
   background-color: var(--accet-green);
 }
-body.theme-light .hero-order-btn span {
-  background-color: var(--light-accent);
-}
-body.theme-light .hero-order-btn:hover span {
-  background-color: var(--accet-green);
-}
-body.theme-dark .hero-order-btn span {
+[data-theme='dark'] .hero-order-btn span {
   background-color: var(--hover);
 }
-body.theme-dark .hero-order-btn:hover span {
+[data-theme='dark'] .hero-order-btn:hover span {
   background-color: var(--accet-green-dt);
 }
 .hero-description {
@@ -129,10 +113,7 @@ body.theme-dark .hero-order-btn:hover span {
   gap: 24px;
   background-color: var(--light-grey);
 }
-body.theme-light .hero-social {
-  background-color: var(--light-grey);
-}
-body.theme-dark .hero-social {
+[data-theme='dark'] .hero-social {
   background-color: var(--charcoal-dt);
 }
 
