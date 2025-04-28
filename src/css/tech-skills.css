@@ -1,9 +1,9 @@
-.container {
+.container-marquee {
     padding: 0;
 }
 
 @media only screen and (min-width: 360px) and (max-width: 1279px) {
-    .container {
+    .container-marquee {
         min-width: 100%;
         max-width: 100%;
         padding: 0;
@@ -11,7 +11,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
-    .container {
+    .container-marquee {
         max-width: 100%;
         padding: 0;
     }
@@ -52,8 +52,13 @@
     padding: 32px 0px;
     gap: 16px;
     background: var(--Light-accent, #BCDFD1);
+    cursor: pointer;
     
     animation: marqueeLine 15s linear infinite;
+}
+
+[data-theme='dark'].marquee-inner {
+    background: var(--dark-accet-dt);
 }
 
 @media only screen and (min-width: 360px) and (max-width: 1279px) {
@@ -75,8 +80,13 @@
     align-items: center;
     gap: 16px;
     background: var(--Light-grey, #E4E5E6);
+    cursor: pointer;
 
     animation: marqueeLine 15s linear infinite;
+}
+
+[data-theme='dark'].marquee-inner-rotate {
+    background: var(--charcoat-dt);
 }
 
 @media only screen and (min-width: 360px) and (max-width: 1279px) {
@@ -89,6 +99,11 @@
     .marquee-inner-rotate {
         padding: 40px 0;
     }
+}
+
+.marquee-inner.paused,
+.marquee-inner-rotate.paused {
+    animation-play-state: paused;
 }
 
 .marquee-line {
@@ -105,6 +120,10 @@
     white-space: nowrap;
 
     animation-name: marqueeLine;
+}
+
+[data-theme='dark'].marquee-line {
+    color: var(--white-dt);
 }
 
 @media only screen and (min-width: 360px) and (max-width: 1279px) {
@@ -135,6 +154,10 @@
     white-space: nowrap;
 }
 
+[data-theme='dark'].marquee-line-rotate {
+    color: var(--accet-green-dt);
+}
+
 @media only screen and (min-width: 360px) and (max-width: 1279px) {
     .marquee-line-rotate {
         font-size: 36px;
@@ -157,12 +180,20 @@
     background: var(--Accet-green, #00B068);
 }
 
+[data-theme='dark'].marquee-dot {
+    background: var(--accet-green-dt);
+}
+
 .marquee-dot-rotate {
     width: 8px;
     height: 8px;
     flex-shrink: 0;
     border-radius: 2px;
     background: var(--Black, #292929);
+}
+
+[data-theme='dark'].marquee-dot-rotate {
+    background: var(--white-dt);
 }
 
 @keyframes marqueeLine {
