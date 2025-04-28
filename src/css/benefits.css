@@ -84,6 +84,7 @@
   color: var(--black, #292929);
 }
 [data-theme='dark'].benefits-subheader {
+  font-size: 18px;
   color: var(--white-dt, #f0f0f0);
 }
 .benefits-subheader-description {
