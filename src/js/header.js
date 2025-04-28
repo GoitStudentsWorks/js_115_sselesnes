@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeSwitch = document.querySelector('.theme-switch__checkbox');
     const html = document.documentElement;
+    const body = document.body;
     
     if (!themeSwitch) {
         console.warn('Theme switch element not found');
@@ -14,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const setTheme = (isDark) => {
             html.setAttribute('data-theme', isDark ? 'dark' : 'light');
             themeSwitch.checked = isDark;
+            body.style.backgroundColor = isDark ? '#1a1a1a' : '#FFFFFF';
+            body.style.color = isDark ? '#FFFFFF' : '#333333';
         };
 
         setTheme(savedTheme === 'dark' || (!savedTheme && prefersDark));
