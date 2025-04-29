@@ -101,7 +101,7 @@ function createGallery(projects) {
     <button class="button-my-project" onclick="window.open('https://github.com/sselesnes/project-group-09', '_blank')">
       <span class="visit-my-project">VISIT</span>
       <svg class="svg-my-project" height="24" width="24">
-        <use class="svg-visit-my-project" href="${pathSprite}#icon-visit-arrow"></use>
+        <use class="svg-visit-my-project" href="${pathSprite}#icon-visit-my-project"></use>
       </svg>
     </button>
   </div>
@@ -114,7 +114,6 @@ function createGallery(projects) {
 }
 
 
-
 async function loadNextProjects(shouldScroll = true) {
   loadMoreBtn.disabled = true;
   loadMoreBtn.classList.add('disabled');
@@ -122,7 +121,7 @@ async function loadNextProjects(shouldScroll = true) {
   const nextProjects = allProjects.slice(currentIndex, currentIndex + batchSize);
   const previousLastItem = gallery.lastElementChild;
 
-  await new Promise(resolve => setTimeout(resolve, 200)); // Плавная задержка для UX
+  await new Promise(resolve => setTimeout(resolve, 200)); 
 
   createGallery(nextProjects);
 
