@@ -49,7 +49,6 @@
   width: 320px;
   padding: 28px 24px;
   align-items: flex-start;
-
   background-color: transparent;
   transition: background-color 0.3s ease;
   border-radius: 16px;
@@ -104,25 +103,25 @@
   right: 1px;
   top: 50%;
   transform: translateY(-50%);
-  filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(0)
-    contrast(100%);
+  /* filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(0)
+    contrast(100%); */
 }
 
 [data-theme='dark'] .ac .ac-trigger::after {
-  filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(1.2)
-    contrast(100%);
+  /* filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(1.2)
+    contrast(100%); */
 }
 
 .ac.is-active > .ac-header .ac-trigger::after {
   content: '';
   background-image: url('../images/faq/icons/button-up.svg');
-  filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(0)
-    contrast(100%);
+  /* filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(0)
+    contrast(100%); */
 }
 [data-theme='dark'] .ac.is-active > .ac-header .ac-trigger::after {
   content: '';
-  filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(1.2)
-    contrast(100%);
+  /* filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(1.2)
+    contrast(100%); */
 }
 
 .ac-text {
