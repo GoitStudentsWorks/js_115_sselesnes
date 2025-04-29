@@ -1,6 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-const pathSprite = new URL('../images/my-projects/sprite.svg', import.meta.url);
+const pathSprite = '/images/my-projects/sprite.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -101,7 +101,7 @@ function createGallery(projects) {
     <button class="button-my-project" onclick="window.open('https://github.com/sselesnes/project-group-09', '_blank')">
       <span class="visit-my-project">VISIT</span>
       <svg class="svg-my-project" height="24" width="24">
-        <use class="svg-visit-my-project" href="${pathSprite}#icon-visit-arrow-my-project"></use>
+        <use class="svg-visit-my-project" href="${pathSprite}#icon-visit-arrow"></use>
       </svg>
     </button>
   </div>
