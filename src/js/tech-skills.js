@@ -4,6 +4,12 @@ const SKILLS = [
     'React',
     'Node. js',
     'React Native',
+    'Typescript',
+    'HTML/CSS',
+    'JavaScript',
+    'React',
+    'Node. js',
+    'React Native',
     'Typescript'
 ]
 
