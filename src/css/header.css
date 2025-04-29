@@ -1,16 +1,11 @@
-/* Скидання стилів */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Змінні */
 :root {
     /* Light Theme Colors */
     --color-black: #292929;
     --color-accent-green: #00B068;
-    --color-white: #F0F0F0;
+    --color-white: #FFFFFF;
     --color-light-grey: #E4E5E6;
     --color-hover-grey: #BBBBBB;
     --color-light-accent: #BCDFD1;
@@ -31,17 +26,18 @@
 
     /* Header Variables */
     --header-height: 60px;
+    --header-height-tablet: 80px;
     --container-padding: 32px;
 
     /* Theme Switch Variables */
-    --toggle-size: 8px;
-    --container-width: 5.625em;
-    --container-height: 2.5em;
+    --toggle-size: 20px;
+    --container-width: 3.2em;
+    --container-height: 1.6em;
     --container-radius: 6.25em;
     --container-light-bg: #3D7EAE;
     --container-night-bg: #1D1F2C;
-    --circle-container-diameter: 3.375em;
-    --sun-moon-diameter: 2.125em;
+    --circle-container-diameter: 2.2em;
+    --sun-moon-diameter: 1.4em;
     --sun-bg: #ECCA2F;
     --moon-bg: #C4C9D1;
     --spot-color: #959DB1;
@@ -74,44 +70,35 @@
     --color-accent: var(--color-accent-green-dt);
     --color-hover-accent: var(--color-hover-green-dt);
     --color-accet-markup: var(--color-accent-green-dt);
-    --image-brightness: 100%;
-    --gradient-start: var(--color-white-dt);
-    --gradient-end: var(--color-black-dt);
-    --section-background: var(--color-black-dt);
 }
 
-/* Базові стилі */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--color-background);
-    min-width: 320px;
-    transition: all 0.3s ease;
-    color: var(--color-text);
-}
-
-body.menu-open {
-    overflow: hidden;
-}
-
-/* Контейнер */
-.header-container {
-    margin: 0 auto;
-    height: 96px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding: 36px 32px; */
-    width: 1280px;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-background);
+  transition: all 0.3s ease;
+  color: var(--color-text);
 }
 
 /* Шапка */
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--color-background);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.header-container {
+    margin: 0 auto;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 437px;
-    
+    justify-content: space-between;
+    padding: 0 var(--container-padding);
+    max-width: 1280px;
 }
 
 .header-left {
@@ -167,7 +154,8 @@ body.menu-open {
     transition: color 250ms ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: var(--color-accent);
 }
 
@@ -176,6 +164,42 @@ body.menu-open {
     position: relative;
     width: 24px;
     height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-menu {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-menu span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger-menu.is-open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.is-open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Перемикач теми */
@@ -188,20 +212,13 @@ body.menu-open {
     height: var(--container-height);
 }
 
-.theme-switch, .theme-switch *, .theme-switch *::before, .theme-switch *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: var(--toggle-size);
-}
-
 .theme-switch__checkbox {
     display: none;
 }
 
 .theme-switch__container {
-    width: var(--container-width);
-    height: var(--container-height);
+    width: 100%;
+    height: 100%;
     background-color: var(--container-light-bg);
     border-radius: var(--container-radius);
     overflow: hidden;
@@ -210,16 +227,6 @@ body.menu-open {
                 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
     transition: var(--transition);
     position: relative;
-}
-
-.theme-switch__container::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    inset: 0;
-    box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset,
-                0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
-    border-radius: var(--container-radius);
 }
 
 .theme-switch__circle-container {
@@ -270,27 +277,27 @@ body.menu-open {
 
 .theme-switch__spot {
     position: absolute;
-    top: 0.75em;
-    left: 0.312em;
-    width: 0.75em;
-    height: 0.75em;
+    top: 0.4em;
+    left: 0.2em;
+    width: 0.4em;
+    height: 0.4em;
     border-radius: var(--container-radius);
     background-color: var(--spot-color);
     box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
 }
 
 .theme-switch__spot:nth-of-type(2) {
-    width: 0.375em;
-    height: 0.375em;
-    top: 0.937em;
-    left: 1.375em;
+    width: 0.2em;
+    height: 0.2em;
+    top: 0.6em;
+    left: 0.8em;
 }
 
 .theme-switch__spot:nth-last-of-type(3) {
-    width: 0.25em;
-    height: 0.25em;
-    top: 0.312em;
-    left: 0.812em;
+    width: 0.15em;
+    height: 0.15em;
+    top: 0.2em;
+    left: 0.5em;
 }
 
 .theme-switch__clouds {
@@ -315,7 +322,7 @@ body.menu-open {
                 3.375em -0.437em var(--back-clouds-color),
                 4.625em -1.75em 0 0.437em var(--clouds-color),
                 4em -0.625em var(--back-clouds-color),
-                4.125em -2.125em 0 0.437em var(--back-clouds-color);
+                4.125em -2.125em 0 0.437em var(--clouds-color);
     transition: var(--transition);
 }
 
@@ -350,59 +357,20 @@ body.menu-open {
     opacity: 1;
 }
 
-/* Добавляем hover эффекты */
-.theme-switch__circle-container:hover {
-    left: calc(var(--circle-container-offset) + 0.187em);
-}
-
-.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container:hover {
-    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em);
-}
-
-/* Показати перемикач на десктопі */
-@media screen and (min-width: 768px) {
-    .theme-switch {
-        display: flex;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .theme-switch {
-        display: none;
-    }
-}
-
-/* Мобільні стилі (320px - 359px) */
-@media screen and (min-width: 320px) {
-    .header-container {
-        width: 100%;
-        padding: 36px 32px;
-    }
-}
-
-/* Мобільні стилі (360px - 767px) */
-@media screen and (min-width: 360px) {
-    .header-container {
-        width: 360px;
-        padding: 36px 32px;
-    }
-}
-
-/* Планшетні стилі (768px - 1279px) */
+/* Медіа-запити */
 @media screen and (min-width: 768px) {
     .header-container {
         width: 768px;
-        padding: 36px 32px;
-        height: 96px;
+        padding: 0 32px;
     }
 
     .header {
-        height: 96px;
+        height: var(--header-height-tablet);
     }
 
-    .header .header-container {
-        padding-top: 36px;
-        padding-bottom: 36px;
+    .header-container {
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 
     .nav {
@@ -418,13 +386,16 @@ body.menu-open {
         align-items: center;
         gap: 40px;
     }
+
+    .theme-switch {
+        display: flex;
+    }
 }
 
-/* Десктопні стилі (1280px і більше) */
 @media screen and (min-width: 1280px) {
     .header-container {
         width: 1280px;
-        padding: 36px 32px;
+        padding: 0 100px;
     }
 
     .logo {
@@ -438,59 +409,4 @@ body.menu-open {
     .nav-list {
         gap: 40px;
     }
-}
-
-/* Для зображень */
-img {
-    filter: brightness(var(--image-brightness));
-}
-
-/* Для іконок */
-.icon {
-    color: var(--color-text);
-    transition: color 0.3s ease;
-}
-
-/* Для градієнтів */
-.gradient {
-    background: linear-gradient(var(--gradient-start), var(--gradient-end));
-}
-
-/* Для відео та iframe */
-video, iframe {
-    background-color: var(--color-background);
-}
-
-/* Стилі для тексту */
-h1, h2, h3, h4, h5, h6, p, span, a {
-    color: var(--color-text);
-    transition: color 0.3s ease;
-}
-
-/* Стилі для кнопок */
-.button {
-    background-color: var(--color-card-bg);
-    color: var(--color-text);
-    border-color: var(--color-border);
-    transition: all 0.3s ease;
-}
-
-/* Стилі для форм */
-input, textarea, select {
-    background-color: var(--color-card-bg);
-    color: var(--color-text);
-    border-color: var(--color-border);
-    transition: all 0.3s ease;
-}
-
-/* Стилі для модальних вікон */
-.modal {
-    background-color: var(--color-background);
-    transition: background-color 0.3s ease;
-}
-
-.modal-content {
-    background-color: var(--color-card-bg);
-    border-color: var(--color-border);
-    transition: all 0.3s ease;
 } 
