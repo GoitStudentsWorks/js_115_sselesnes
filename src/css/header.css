@@ -1,5 +1,3 @@
-
-
 /* Скидання стилів */
 * {
     margin: 0;
@@ -17,6 +15,7 @@
     --color-hover-grey: #BBBBBB;
     --color-light-accent: #BCDFD1;
     --color-hover: #009156; 
+    --color-accet-markup: #00B068;
 
     /* Dark Theme Colors */
     --color-black-dt: #1E2023;
@@ -36,16 +35,16 @@
 
     /* Theme Switch Variables */
     --toggle-size: 8px;
-    --container-width: 48px;
-    --container-height: 24px;
-    --container-radius: 24px;
-    --container-light-bg: var(--color-light-accent);
-    --container-night-bg: var(--color-black-dt);
-    --circle-container-diameter: 28px;
-    --sun-moon-diameter: 20px;
-    --sun-bg: var(--color-accent-green);
-    --moon-bg: var(--color-white-dt);
-    --spot-color: var(--color-hover-charcoal-dt);
+    --container-width: 5.625em;
+    --container-height: 2.5em;
+    --container-radius: 6.25em;
+    --container-light-bg: #3D7EAE;
+    --container-night-bg: #1D1F2C;
+    --circle-container-diameter: 3.375em;
+    --sun-moon-diameter: 2.125em;
+    --sun-bg: #ECCA2F;
+    --moon-bg: #C4C9D1;
+    --spot-color: #959DB1;
     --circle-container-offset: calc((var(--circle-container-diameter) - var(--container-height)) / 2 * -1);
     --stars-color: #fff;
     --clouds-color: #F3FDFF;
@@ -74,6 +73,7 @@
     --color-switch-bg: var(--color-charcoal-dt);
     --color-accent: var(--color-accent-green-dt);
     --color-hover-accent: var(--color-hover-green-dt);
+    --color-accet-markup: var(--color-accent-green-dt);
     --image-brightness: 100%;
     --gradient-start: var(--color-white-dt);
     --gradient-end: var(--color-black-dt);
