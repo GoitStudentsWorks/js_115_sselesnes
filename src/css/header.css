@@ -1,68 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+/* Скидання стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Змінні */
 :root {
-    --color-primary: #000000;
-    --color-accent: #00B068;
-    --color-white: #FFFFFF;
-    --color-background: #FFFFFF;
-    --color-text: #333333;
-    --color-card-bg: #F5F5F5;
-    --color-border: #e0e0e0;
-    --color-switch-bg: #E6E6E6;
-    --color-switch-dark: #2C2C2C;
+    /* Light Theme Colors */
+    --color-black: #292929;
+    --color-accent-green: #00B068;
+    --color-white: #F0F0F0;
+    --color-light-grey: #E4E5E6;
+    --color-hover-grey: #BBBBBB;
+    --color-light-accent: #BCDFD1;
+    --color-hover: #009156; 
+
+    /* Dark Theme Colors */
+    --color-black-dt: #1E2023;
+    --color-accent-green-dt: #14C57C;
+    --color-white-dt: #F0F0F0;
+    --color-charcoal-dt: #2A2D32;
+    --color-hover-charcoal-dt: #3B3F45;
+    --color-dark-accent-dt: #204136;
+    --color-hover-green-dt: #009156;
+    
+    /* System Colors */
+    --color-error: #E74A3B;
+
+    /* Header Variables */
     --header-height: 60px;
-    --header-height-tablet: 80px;
     --container-padding: 32px;
+
+    /* Theme Switch Variables */
+    --toggle-size: 8px;
     --container-width: 48px;
     --container-height: 24px;
     --container-radius: 24px;
-    --container-light-bg: #3D7EAE;
-    --container-night-bg: #1D1F2C;
+    --container-light-bg: var(--color-light-accent);
+    --container-night-bg: var(--color-black-dt);
     --circle-container-diameter: 28px;
     --sun-moon-diameter: 20px;
-    --sun-bg: #ECCA2F;
-    --moon-bg: #C4C9D1;
-    --spot-color: #959DB1;
+    --sun-bg: var(--color-accent-green);
+    --moon-bg: var(--color-white-dt);
+    --spot-color: var(--color-hover-charcoal-dt);
     --circle-container-offset: calc((var(--circle-container-diameter) - var(--container-height)) / 2 * -1);
     --stars-color: #fff;
     --clouds-color: #F3FDFF;
     --back-clouds-color: #AACADF;
     --transition: .5s cubic-bezier(0, -0.02, 0.4, 1.25);
     --circle-transition: .3s cubic-bezier(0, -0.02, 0.35, 1.17);
+
+    /* Світла тема (за замовчуванням) */
+    --color-primary: var(--color-black);
+    --color-background: var(--color-white);
+    --color-text: var(--color-black);
+    --color-card-bg: var(--color-light-grey);
+    --color-border: var(--color-hover-grey);
+    --color-switch-bg: var(--color-light-grey);
+    --color-accent: var(--color-accent-green);
+    --color-hover-accent: var(--color-hover);
 }
 
 /* Темна тема */
 [data-theme="dark"] {
-    --color-primary: #FFFFFF;
-    --color-background: #1a1a1a;
-    --color-text: #ffffff;
-    --color-card-bg: #2d2d2d;
-    --color-border: #404040;
-    --color-switch-bg: #2C2C2C;
-    --color-accent: #00B068;
+    --color-primary: var(--color-white-dt);
+    --color-background: var(--color-black-dt);
+    --color-text: var(--color-white-dt);
+    --color-card-bg: var(--color-charcoal-dt);
+    --color-border: var(--color-hover-charcoal-dt);
+    --color-switch-bg: var(--color-charcoal-dt);
+    --color-accent: var(--color-accent-green-dt);
+    --color-hover-accent: var(--color-hover-green-dt);
+    --image-brightness: 100%;
+    --gradient-start: var(--color-white-dt);
+    --gradient-end: var(--color-black-dt);
+    --section-background: var(--color-black-dt);
+}
+
+/* Базові стилі */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    min-width: 320px;
+    transition: all 0.3s ease;
+    color: var(--color-text);
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Контейнер */
+.header-container {
+    margin: 0 auto;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 36px 32px; */
+    width: 1280px;
 }
 
 /* Шапка */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--header-height);
-    background-color: var(--color-background);
-    z-index: 100;
-    transition: background-color 0.3s ease;
-}
-
-.header-container {
-    margin: 0 auto;
-    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 var(--container-padding);
-    max-width: 1280px;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 437px;
+    
 }
 
 .header-left {
@@ -118,8 +167,7 @@
     transition: color 250ms ease;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-link:hover {
     color: var(--color-accent);
 }
 
@@ -140,13 +188,20 @@
     height: var(--container-height);
 }
 
+.theme-switch, .theme-switch *, .theme-switch *::before, .theme-switch *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: var(--toggle-size);
+}
+
 .theme-switch__checkbox {
     display: none;
 }
 
 .theme-switch__container {
-    width: 100%;
-    height: 100%;
+    width: var(--container-width);
+    height: var(--container-height);
     background-color: var(--container-light-bg);
     border-radius: var(--container-radius);
     overflow: hidden;
@@ -155,6 +210,16 @@
                 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
     transition: var(--transition);
     position: relative;
+}
+
+.theme-switch__container::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset,
+                0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
+    border-radius: var(--container-radius);
 }
 
 .theme-switch__circle-container {
@@ -250,7 +315,7 @@
                 3.375em -0.437em var(--back-clouds-color),
                 4.625em -1.75em 0 0.437em var(--clouds-color),
                 4em -0.625em var(--back-clouds-color),
-                4.125em -2.125em 0 0.437em var(--clouds-color);
+                4.125em -2.125em 0 0.437em var(--back-clouds-color);
     transition: var(--transition);
 }
 
@@ -285,20 +350,59 @@
     opacity: 1;
 }
 
-/* Медіа-запити */
+/* Добавляем hover эффекты */
+.theme-switch__circle-container:hover {
+    left: calc(var(--circle-container-offset) + 0.187em);
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container:hover {
+    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em);
+}
+
+/* Показати перемикач на десктопі */
+@media screen and (min-width: 768px) {
+    .theme-switch {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .theme-switch {
+        display: none;
+    }
+}
+
+/* Мобільні стилі (320px - 359px) */
+@media screen and (min-width: 320px) {
+    .header-container {
+        width: 100%;
+        padding: 36px 32px;
+    }
+}
+
+/* Мобільні стилі (360px - 767px) */
+@media screen and (min-width: 360px) {
+    .header-container {
+        width: 360px;
+        padding: 36px 32px;
+    }
+}
+
+/* Планшетні стилі (768px - 1279px) */
 @media screen and (min-width: 768px) {
     .header-container {
         width: 768px;
-        padding: 0 32px;
+        padding: 36px 32px;
+        height: 96px;
     }
 
     .header {
-        height: var(--header-height-tablet);
+        height: 96px;
     }
 
-    .header-container {
-        padding-top: 24px;
-        padding-bottom: 24px;
+    .header .header-container {
+        padding-top: 36px;
+        padding-bottom: 36px;
     }
 
     .nav {
@@ -314,16 +418,13 @@
         align-items: center;
         gap: 40px;
     }
-
-    .theme-switch {
-        display: flex;
-    }
 }
 
+/* Десктопні стилі (1280px і більше) */
 @media screen and (min-width: 1280px) {
     .header-container {
         width: 1280px;
-        padding: 0 100px;
+        padding: 36px 32px;
     }
 
     .logo {
@@ -339,9 +440,57 @@
     }
 }
 
-/* Стилі для друку */
-@media print {
-    .header, .menu-buttons, .theme-switch {
-        display: none;
-    }
+/* Для зображень */
+img {
+    filter: brightness(var(--image-brightness));
+}
+
+/* Для іконок */
+.icon {
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+/* Для градієнтів */
+.gradient {
+    background: linear-gradient(var(--gradient-start), var(--gradient-end));
+}
+
+/* Для відео та iframe */
+video, iframe {
+    background-color: var(--color-background);
+}
+
+/* Стилі для тексту */
+h1, h2, h3, h4, h5, h6, p, span, a {
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+/* Стилі для кнопок */
+.button {
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+    border-color: var(--color-border);
+    transition: all 0.3s ease;
+}
+
+/* Стилі для форм */
+input, textarea, select {
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+    border-color: var(--color-border);
+    transition: all 0.3s ease;
+}
+
+/* Стилі для модальних вікон */
+.modal {
+    background-color: var(--color-background);
+    transition: background-color 0.3s ease;
+}
+
+.modal-content {
+    background-color: var(--color-card-bg);
+    border-color: var(--color-border);
+    transition: all 0.3s ease;
 } 

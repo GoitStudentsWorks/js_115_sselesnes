@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-                const particleColor = isDark ? '#FFFFFF' : '#00B068';
+                const particleColor = isDark ? '#F0F0F0' : '#00B068';
 
                 particlesJS('particles-js', {
                     particles: {
@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                         },
                         color: {
-                            value: [particleColor, '#14c57c', '#009156']
+                            value: isDark ? 
+                                ['#F0F0F0', '#14C57C', '#009156'] :
+                                ['#00B068', '#BCDFD1', '#009156']
                         },
                         shape: {
                             type: 'circle'
