@@ -1,6 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-const pathSprite = new URL('../img/sprite.svg', import.meta.url);
+const pathSprite = new URL('../images/my-projects/sprite.svg', import.meta.url);
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -11,62 +11,62 @@ const allProjects = [
     src1x: './my-projects/rectangle-11-1x.jpg',
     src2x: './my-projects/rectangle-11-2x.jpg',
     src: './my-projects/rectangle-11-1x.jpg',
-    alt: "Wallet webservice"
+    alt: 'Wallet webservice',
   },
   {
     src1x: './my-projects/rectangle-9-1x.jpg',
     src2x: './my-projects/rectangle-9-2x.jpg',
     src: './my-projects/rectangle-9-1x.jpg',
-    alt: "Green harvest webservice"
+    alt: 'Green harvest webservice',
   },
   {
     src1x: './my-projects/rectangle-12-1x.jpg',
     src2x: './my-projects/rectangle-12-2x.jpg',
     src: './my-projects/rectangle-12-1x.jpg',
-    alt: "English Excellence website"
+    alt: 'English Excellence website',
   },
   {
     src1x: './my-projects/rectangle-10-1x.jpg',
     src2x: './my-projects/rectangle-10-2x.jpg',
     src: './my-projects/rectangle-10-1x.jpg',
-    alt: "Power Pulse webservice"
+    alt: 'Power Pulse webservice',
   },
   {
     src1x: './my-projects/rectangle-7-1x.jpg',
     src2x: './my-projects/rectangle-7-2x.jpg',
     src: './my-projects/rectangle-7-1x.jpg',
-    alt: "Mimino website"
+    alt: 'Mimino website',
   },
   {
     src1x: './my-projects/rectangle-8-1x.jpg',
     src2x: './my-projects/rectangle-8-2x.jpg',
     src: './my-projects/rectangle-8-1x.jpg',
-    alt: "Vyshyvanka Vibes Landing Page"
+    alt: 'Vyshyvanka Vibes Landing Page',
   },
   {
     src1x: './my-projects/rectangle-6-1x.jpg',
     src2x: './my-projects/rectangle-6-2x.jpg',
     src: './my-projects/rectangle-6-1x.jpg',
-    alt: "Chego Jewelry website"
+    alt: 'Chego Jewelry website',
   },
   {
     src1x: './my-projects/rectangle-4-1x.jpg',
     src2x: './my-projects/rectangle-4-2x.jpg',
     src: './my-projects/rectangle-4-1x.jpg',
-    alt: "Energy Flow webservice"
+    alt: 'Energy Flow webservice',
   },
   {
     src1x: './my-projects/rectangle-5-1x.jpg',
     src2x: './my-projects/rectangle-5-2x.jpg',
     src: './my-projects/rectangle-5-1x.jpg',
-    alt: "Fruitbox online store"
+    alt: 'Fruitbox online store',
   },
   {
     src1x: './my-projects/first-screen-1-1x.jpg',
     src2x: './my-projects/first-screen-1-2x.jpg',
     src: './my-projects/first-screen-1-1x.jpg',
-    alt: "Starlight Studio Landing Page"
-  }
+    alt: 'Starlight Studio Landing Page',
+  },
 ];
 
 const BASE_URL = import.meta.env.BASE_URL;
@@ -101,7 +101,7 @@ function createGallery(projects) {
     <button class="button-my-project" onclick="window.open('https://github.com/sselesnes/project-group-09', '_blank')">
       <span class="visit-my-project">VISIT</span>
       <svg class="svg-my-project" height="24" width="24">
-        <use class="svg-visit-my-project" href="${pathSprite}#icon-visit-my-project"></use>
+        <use class="svg-visit-my-project" href="${pathSprite}#icon-visit-arrow-my-project"></use>
       </svg>
     </button>
   </div>
@@ -113,19 +113,23 @@ function createGallery(projects) {
   lightbox.refresh();
 }
 
-
 async function loadNextProjects(shouldScroll = true) {
   loadMoreBtn.disabled = true;
   loadMoreBtn.classList.add('disabled');
 
-  const nextProjects = allProjects.slice(currentIndex, currentIndex + batchSize);
+  const nextProjects = allProjects.slice(
+    currentIndex,
+    currentIndex + batchSize
+  );
   const previousLastItem = gallery.lastElementChild;
 
   await new Promise(resolve => setTimeout(resolve, 200)); 
 
   createGallery(nextProjects);
 
-  const newFirstCard = previousLastItem ? previousLastItem.nextElementSibling : gallery.firstElementChild;
+  const newFirstCard = previousLastItem
+    ? previousLastItem.nextElementSibling
+    : gallery.firstElementChild;
 
   if (shouldScroll && newFirstCard) {
     newFirstCard.scrollIntoView({
@@ -144,8 +148,6 @@ async function loadNextProjects(shouldScroll = true) {
   }
 }
 
-
 loadMoreBtn.addEventListener('click', loadNextProjects);
 
 loadNextProjects(false);
-
