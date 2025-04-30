@@ -6,7 +6,7 @@
 
 /* ---------- Мобилка ---------- */
 .reviews {
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 40px;
 }
 
@@ -17,18 +17,18 @@
   line-height: 1.23;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-text);
+  color: #292929;
 }
 
 .reviews-list {
   display: flex;
-  gap: 32px;
+  /* gap: 32px; */
 }
 
 .reviews-list-item {
   border-radius: 16px;
   padding: 32px;
-  background-color: var(--color-card-bg);
+  background-color: #e4e5e6;
   margin-top: 40px;
 }
 
@@ -42,7 +42,7 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--color-text);
+  color: #292929;
 }
 
 .reviews-list-item-author {
@@ -52,8 +52,9 @@
   align-items: center;
 }
 
-/* .reviews-list-item-img {
-} */
+.reviews-list-item-img {
+  border-radius: 50%;
+}
 
 .reviews-list-item-name {
   font-family: 'Poppins', sans-serif;
@@ -61,7 +62,7 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--color-text);
+  color: #292929;
 }
 
 .reviews-list-btns {
@@ -76,11 +77,11 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  border: 1px solid var(--color-text);
+  border: 1px solid #292929;
   width: 40px;
   height: 40px;
-  /* stroke: var(--color-text);
-  fill: transparent; */
+  stroke: #292929;
+  fill: transparent;
 }
 
 .reviews-btn.disabled {
@@ -89,10 +90,14 @@
   cursor: default;
 }
 
+.reviews-list-item {
+  margin-top: 40px;
+}
+
 /* ---------- Планшет ---------- */
 @media only screen and (min-width: 768px) {
   .reviews {
-    padding-top: 62px;
+    padding-top: 124px;
     padding-bottom: 62px;
   }
 
@@ -103,7 +108,7 @@
     line-height: 1.14815;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--color-text);
+    color: #292929;
   }
 
   /* .reviews-list {
@@ -118,7 +123,7 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: var(--color-text);
+    color: #292929;
   }
   /* .reviews-list-item-author {
   } */
@@ -130,7 +135,7 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: var(--color-text);
+    color: #292929;
   }
 
   /* .reviews-list-btns {
@@ -149,7 +154,7 @@
 /* ---------- Десктоп ---------- */
 @media only screen and (min-width: 1280px) {
   .reviews {
-    padding-top: 82px;
+    padding-top: 164px;
     padding-bottom: 82px;
   }
 
@@ -160,7 +165,7 @@
     line-height: 1.14815;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--color-text);
+    color: #292929;
   }
 
   /* .reviews-list {
@@ -180,7 +185,7 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: var(--color-text);
+    color: #292929;
   }
 
   /* .reviews-list-item-author {
@@ -195,7 +200,7 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: var(--color-text);
+    color: #292929;
   }
 
   /* .reviews-list-btns {

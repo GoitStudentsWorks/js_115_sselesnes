@@ -2,12 +2,8 @@ import Swiper from 'swiper';
 import 'swiper/css';
 
 const REVIEWS_LIST = document.querySelector('.reviews-list');
-const REVIEWS_BTN_LEFT = document
-  .querySelector('.reviews-btn-left')
-  .closest('button');
-const REVIEWS_BTN_RIGHT = document
-  .querySelector('.reviews-btn-right')
-  .closest('button');
+const REVIEWS_BTN_LEFT = document.querySelector('.reviews-btn-left');
+const REVIEWS_BTN_RIGHT = document.querySelector('.reviews-btn-right');
 
 const API_URL = 'https://portfolio-js.b.goit.study/api/reviews';
 let swiper;
@@ -15,7 +11,7 @@ let reviewsData;
 
 async function fetchReviews() {
   try {
-    const response = await fetch(API_URL);
+    const response = await fetch(`${API_URL}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status:${response.status}`);
     }
@@ -23,8 +19,7 @@ async function fetchReviews() {
     if (!reviewsData.length) {
       throw new Error('No reviews');
     }
-    renderRewiews(reviewsData);
-    console.log(reviewsData);
+    renderReviews(reviewsData);
     initSwiper();
   } catch (error) {
     console.error('Failed to load reviews: ' + error.message);
@@ -32,24 +27,30 @@ async function fetchReviews() {
   }
 }
 
-function renderRewiews(reviews) {
+{
+  /* <picture>
+    <source srcset="${review.image1x} 1x, ${review.image2x} 2x" type="image/webp" />
+     */
+}
+//  </picture>
+function renderReviews(reviews) {
+  console.log(reviews);
   REVIEWS_LIST.innerHTML = reviews
     .map(
       review => `
-        <li class="reviews-list-item swiper-slide">
-        <p class="reviews-list-item-text">${review.text}</p>
+        <li class="swiper-slide reviews-list-item" >
+        <p class="reviews-list-item-text">${review.review}</p>
         <div class="reviews-list-item-author">
-        <picture>
-        <source srcset="${review.image1x} 1x, ${review.image2x} 2x" type="image/webp"/>
+        
         <img 
             class="reviews-list-item-img"
-            src="${review.image2x}"
+            src="${review.avatar_url}"
             alt="${review.author}"
             width="40"
             height="40"
             loading="lazy"
             decoding="async"/>
-        </picture>
+    
         <h4 class="reviews-list-item-name">${review.author}</h4>
         </div>
         </li>
@@ -64,12 +65,20 @@ function renderNotFound() {
 }
 
 function initSwiper() {
-  swiper = new Swiper('.reviews-list', {
-    slidesPerView: 1,
+  swiper = new Swiper('.reviews-swiper', {
     spaceBetween: 32,
     breakpoints: {
       1280: {
         slidesPerView: 2,
+        width: 1216,
+        768: {
+          slidesPerView: 1,
+          width: 704,
+        },
+        360: {
+          slidesPerView: 1,
+          width: 320,
+        },
       },
     },
     keyboard: {

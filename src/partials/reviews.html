@@ -1,58 +1,38 @@
 <section class="container reviews" id="reviews">
   <h2 class="reviews-title">reviews</h2>
-  <ul class="reviews-list">
-    <li class="reviews-list-item">
+  <div class="swiper reviews-swiper">
+  <ul class="swiper-wrapper reviews-list">
+    <li class="swiper-slide reviews-list-item">
       <p class="reviews-list-item-text">
         Work with was extraordinary! He turned out to be a very competent and
         responsible specialist. The projects were completed on time and the
         result exceeded my expectations
       </p>
       <div class="reviews-list-item-author">
-        <picture
-          ><source
-            srcset="
-              /images/reviews/natalia_shevchenko_1x.webp 1x,
-              /images/reviews/natalia_shevchenko_2x.webp 2x
-            "
-            type="image/webp"
-          />
-          <img
-            class="reviews-list-item-img"
-            src="/images/reviews/natalia_shevchenko_2x.webp"
-            alt="Natalia Shevchenko"
-            width="40"
-            height="40"
-            loading="lazy"
-            decoding="async"
-          />
+        <picture>
+          <source srcset="../images/reviews/natalia_shevchenko_1x.webp,
+                ../images/reviews/natalia_shevchenko_2x.webp 2x
+              " type="image/webp" />
+          <img class="reviews-list-item-img" src="/images/reviews/natalia_shevchenko_2x.webp" alt="Natalia Shevchenko"
+            width="40" height="40" loading="lazy" decoding="async" />
         </picture>
         <h4 class="reviews-list-item-name">Natalia Shevchenko</h4>
       </div>
     </li>
-    <li class="reviews-list-item">
+    <li class="swiper-slide reviews-list-item">
       <p class="reviews-list-item-text">
         I have the honor to recommend him as an exceptional professional in his
         field. His knowledge and expertise are undeniable. Cooperation with him
         always brings impressive results.
       </p>
       <div class="reviews-list-item-author">
-        <picture
-          ><source
-            srcset="
-              /images/reviews/dmytro_nazarenko_1x.webp 1x,
-              /images/reviews/dmytro_nazarenko_2x.webp 2x
-            "
-            type="image/webp"
-          />
-          <img
-            class="reviews-list-item-img"
-            src="/images/reviews/dmytro_nazarenko_2x.webp"
-            alt="Dmytro Nazarenko"
-            width="40"
-            height="40"
-            loading="lazy"
-            decoding="async"
-          />
+        <picture>
+          <source srcset="
+                /images/reviews/dmytro_nazarenko_1x.webp 1x,
+                /images/reviews/dmytro_nazarenko_2x.webp 2x
+              " type="image/webp" />
+          <img class="reviews-list-item-img" src="/images/reviews/dmytro_nazarenko_2x.webp" alt="Dmytro Nazarenko"
+            width="40" height="40" loading="lazy" decoding="async" />
         </picture>
         <h4 class="reviews-list-item-name">Dmytro Nazarenko</h4>
       </div>
@@ -69,6 +49,7 @@
         <use href="/images/reviews/reviews.svg#icon-arrow-narrow-right"></use>
       </svg>
     </button>
+  </div>
   </div>
 </section>
 <script type="module" src="./js/reviews.js"></script>
