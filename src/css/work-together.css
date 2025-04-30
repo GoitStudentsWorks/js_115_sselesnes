@@ -123,6 +123,11 @@
   display: flex;
   align-items: center;
 }
+.li-info-work svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-accent);
+}
 .li-info-work span a {
   padding-left: 16px;
 }
@@ -285,7 +290,7 @@
   .right-side {
     width: 592px;
     background: var(--color-background);
-    padding: 40px;
+    /* padding: 40px; */
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -297,10 +302,6 @@
   }
   .form {
     width: 100%;
-  }
-  .form input,
-  .form textarea {
-    /* width: 592px; */
   }
   .work-together-wraper {
     display: flex;

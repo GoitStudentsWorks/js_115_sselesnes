@@ -215,7 +215,7 @@ section#faq .ac-trigger::-moz-focus-inner {
   /* accordion */
   .accordion-container {
     margin-top: 60px;
-    width: 704px;
+    /* width: 704px; */
     height: auto;
   }
 
@@ -264,6 +264,6 @@ section#faq .ac-trigger::-moz-focus-inner {
   }
 
   .ac {
-    /* width: 592px; */
+    width: 688px;
   }
 }
