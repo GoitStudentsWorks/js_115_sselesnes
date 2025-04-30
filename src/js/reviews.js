@@ -2,16 +2,16 @@ import Swiper from 'swiper';
 import 'swiper/css';
 
 const REVIEWS_LIST = document.querySelector('.reviews-list');
-const REVIEWS_BTN_LEFT = document.querySelector('.reviews-btn-left').closest('button');
-const REVIEWS_BTN_RIGHT = document.querySelector('.reviews-btn-right').closest('button');
+const REVIEWS_BTN_LEFT = document.querySelector('.reviews-btn-left');
+const REVIEWS_BTN_RIGHT = document.querySelector('.reviews-btn-right');
 
-const API_URL = '';
+const API_URL = "https://portfolio-js.b.goit.study/api/reviews";
 let swiper;
 let reviewsData;
 
 async function fetchReviews() {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(`${API_URL}`)
         if (!response.ok) {
             throw new Error(`HTTP error! status:${response.status}`);
         }
@@ -20,7 +20,7 @@ async function fetchReviews() {
             throw new Error("No reviews");
             
         }
-            renderRewiews(reviewsData);
+            renderReviews(reviewsData);
             initSwiper()
         
     } catch (error) {
@@ -29,9 +29,9 @@ async function fetchReviews() {
     }
 }
 
-function renderRewiews(reviews) {
+function renderReviews(reviews) {
     REVIEWS_LIST.innerHTML = reviews.map(review => `
-        <li class="reviews-list-item swiper-slide">
+        <li class="swiper-slide reviews-list-item">
         <p class="reviews-list-item-text">${review.text}</p>
         <div class="reviews-list-item-author">
         <picture>
@@ -58,7 +58,7 @@ function renderNotFound() {
 }
 
 function initSwiper() {
-    swiper = new Swiper('.reviews-list', {
+    swiper = new Swiper('.reviews-swiper', {
         slidesPerView: 1,
         spaceBetween: 32,
         breakpoints: {
