@@ -49,22 +49,24 @@
   width: 320px;
   padding: 28px 24px;
   align-items: flex-start;
-  border: none;
-
   transition: background-color 0.3s ease;
-  border-radius: 16px;
   border-bottom: 1px solid var(--light-grey);
+  background-color: white; /* Додаємо білий фон для неактивного стану */
+  border: none;
+  outline: none;
 }
 [data-theme='dark'] .ac {
-  border-bottom: 1px solid var(--white-dt);
   background-color: transparent; /* Видалив колір фону*/
+  border: none;
+  border-bottom: 1px solid var(--white-dt); /*нижній бордер*/
 }
 
 [data-theme='dark'] .ac.is-active {
   background-color: transparent; /* Активний стан також не матиме фону */
+  border-radius: 16px;
 }
 
-/*  */
+/* */
 .ac-header {
   display: flex;
   width: 100%;
@@ -149,9 +151,11 @@
 .ac.is-active {
   background-color: var(--light-accent, #bcdfd1);
   border: 0;
+  border-radius: 16px; /* Залишаємо радіус лише для активного стану */
 }
 [data-theme='dark'] .ac.is-active {
   background-color: var(--dark-accet-dt);
+  border-radius: 16px; /* Залишаємо радіус лише для активного стану */
 }
 
 .ac.is-active .ac-trigger {
@@ -172,7 +176,7 @@
   padding-top: 12px;
 }
 
-/*  */
+/* */
 /* === ТЕМНА ТЕМА: всі НЕактивні заголовки білі === */
 [data-theme='dark'] section#faq .ac:not(.is-active) .ac-trigger {
   /* специфічність: 0,4,0 (attribute + element#id + class + pseudo-class) */
@@ -192,7 +196,7 @@ section#faq .ac-trigger::-moz-focus-inner {
   border: 0;
 }
 
-/*  */
+/* */
 /* TABLET */
 @media only screen and (min-width: 768px) {
   .faq {
