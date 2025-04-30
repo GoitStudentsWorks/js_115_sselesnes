@@ -52,8 +52,8 @@
   align-items: center;
 }
 
-.reviews-list-item-img {
-}
+/* .reviews-list-item-img {
+} */
 
 .reviews-list-item-name {
   font-family: 'Poppins', sans-serif;
@@ -79,8 +79,15 @@
   border: 1px solid #292929;
   width: 40px;
   height: 40px;
-  /* stroke: #292929; */
-  /* fill: transparent; */
+  /* stroke: #292929;
+  fill: transparent; */
+}
+
+.reviews-btn.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: default;
+  
 }
 
 /* ---------- Планшет ---------- */
@@ -100,8 +107,8 @@
     color: #292929;
   }
 
-  .reviews-list {
-  }
+  /* .reviews-list {
+  } */
 
   .reviews-list-item {
     margin-top: 60px;
@@ -114,10 +121,10 @@
     letter-spacing: 0.03em;
     color: #292929;
   }
-  .reviews-list-item-author {
-  }
-  .reviews-list-item-img {
-  }
+  /* .reviews-list-item-author {
+  } */
+  /* .reviews-list-item-img {
+  } */
   .reviews-list-item-name {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -127,17 +134,17 @@
     color: #292929;
   }
 
-  .reviews-list-btns {
-  }
+  /* .reviews-list-btns {
+  } */
 
-  .reviews-btn {
-  }
+  /* .reviews-btn {
+  } */
 
-  .reviews-right {
-  }
+  /* .reviews-right {
+  } */
 
-  .reviews-left {
-  }
+  /* .reviews-left {
+  } */
 }
 
 /* ---------- Десктоп ---------- */
@@ -157,8 +164,8 @@
     color: #292929;
   }
 
-  .reviews-list {
-  }
+  /* .reviews-list {
+  } */
 
   .reviews-list-item {
     margin-top: 80px;
@@ -177,11 +184,11 @@
     color: #292929;
   }
 
-  .reviews-list-item-author {
-  }
+  /* .reviews-list-item-author {
+  } */
 
-  .reviews-list-item-img {
-  }
+  /* .reviews-list-item-img {
+  } */
 
   .reviews-list-item-name {
     font-family: 'Poppins', sans-serif;
@@ -192,17 +199,17 @@
     color: #292929;
   }
 
-  .reviews-list-btns {
-  }
+  /* .reviews-list-btns {
+  } */
 
   .reviews-btn {
     width: 48px;
     height: 48px;
   }
 
-  .reviews-right {
-  }
+  /* .reviews-right {
+  } */
 
-  .reviews-left {
-  }
+  /* .reviews-left {
+  } */
 }
