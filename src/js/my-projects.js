@@ -1,5 +1,3 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 const pathSprite = '/images/my-projects/sprite.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -74,25 +72,19 @@ const BASE_URL = import.meta.env.BASE_URL;
 const gallery = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.btn-load-more-my-project');
 
-// let lightbox = new SimpleLightbox('.gallery a', {
-//   captionsData: 'alt',
-//   captionDelay: 250,
-// });
-
 let currentIndex = 0;
 const batchSize = 3;
 
-// <a href="${src}" class="gallery-link">
-// </a>
 function createGallery(projects) {
+  const projectUrl = 'https://github.com/sselesnes/project-group-09';
   const markup = projects
     .map(({ src1x, src2x, src, alt }) => {
       return `
       <li>
-
+<a href="${projectUrl}" target="_blank" class="gallery-link">
     <img data-aos="flip-up" data-aos-duration="500" data-aos-easing="linear"
     class="image-my-project" srcset="${BASE_URL}${src1x} 1x, ${BASE_URL}${src2x} 2x" src="${BASE_URL}${src}" alt="${alt}" />
-  
+</a>  
     <p class="text-my-project">React, JavaScript, Node JS, Git</p>
       <div class="div-my-project" 
       data-aos="fade-up" 
@@ -100,7 +92,7 @@ function createGallery(projects) {
       data-aos-easing="linear"
       data-aos-duration="500">
     <h3 class="names-my-project">${alt}</h3>
-    <button class="button-my-project" onclick="window.open('https://github.com/sselesnes/project-group-09', '_blank')">
+    <button class="button-my-project" onclick="window.open(${projectUrl}, '_blank')">
       <span class="visit-my-project">VISIT</span>
       <svg class="svg-my-project" height="24" width="24">
         <use class="svg-visit-my-project" href="${pathSprite}#icon-visit-arrow"></use>
@@ -112,7 +104,6 @@ function createGallery(projects) {
     })
     .join('');
   gallery.insertAdjacentHTML('beforeend', markup);
-  // lightbox.refresh();
 }
 
 async function loadNextProjects(shouldScroll = true) {
