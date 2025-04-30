@@ -6,7 +6,7 @@
 
 /* ---------- Мобилка ---------- */
 .reviews {
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 40px;
 }
 
@@ -22,7 +22,7 @@
 
 .reviews-list {
   display: flex;
-  gap: 32px;
+  /* gap: 32px; */
 }
 
 .reviews-list-item {
@@ -52,8 +52,9 @@
   align-items: center;
 }
 
-/* .reviews-list-item-img {
-} */
+.reviews-list-item-img {
+  border-radius: 50%;
+}
 
 .reviews-list-item-name {
   font-family: 'Poppins', sans-serif;
@@ -79,21 +80,24 @@
   border: 1px solid #292929;
   width: 40px;
   height: 40px;
-  /* stroke: #292929;
-  fill: transparent; */
+  stroke: #292929;
+  fill: transparent;
 }
 
 .reviews-btn.disabled {
   opacity: 0.4;
   pointer-events: none;
   cursor: default;
-  
+}
+
+.reviews-list-item {
+  margin-top: 40px;
 }
 
 /* ---------- Планшет ---------- */
 @media only screen and (min-width: 768px) {
   .reviews {
-    padding-top: 62px;
+    padding-top: 124px;
     padding-bottom: 62px;
   }
 
@@ -113,6 +117,7 @@
   .reviews-list-item {
     margin-top: 60px;
   }
+
   .reviews-list-item-text {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -121,6 +126,7 @@
     letter-spacing: 0.03em;
     color: #292929;
   }
+
   /* .reviews-list-item-author {
   } */
   /* .reviews-list-item-img {
@@ -150,7 +156,7 @@
 /* ---------- Десктоп ---------- */
 @media only screen and (min-width: 1280px) {
   .reviews {
-    padding-top: 82px;
+    padding-top: 164px;
     padding-bottom: 82px;
   }
 
