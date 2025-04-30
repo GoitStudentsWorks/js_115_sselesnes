@@ -4,8 +4,8 @@ footer {
   text-align: left;
   /* padding: 16px; */
   font-size: 12px;
-  color: var(--color-text);
-  background-color: var(--color-background);
+  /* color: var(--color-text); */
+  /* background-color: var(--color-background); */
 }
 
 .contact-section {

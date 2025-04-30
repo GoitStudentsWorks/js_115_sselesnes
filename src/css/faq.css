@@ -38,15 +38,14 @@
 /* accordion */
 .accordion-container {
   margin-top: 40px;
-  flex: 1;
-  max-width: 320px;
+
+  /* max-width: 320px; */
   height: auto;
 }
 
 .ac {
   display: flex;
   flex-direction: column;
-  width: 320px;
   padding: 28px 24px;
   align-items: flex-start;
   transition: background-color 0.3s ease;
@@ -236,7 +235,7 @@ section#faq .ac-trigger::-moz-focus-inner {
   }
   .faq-container {
     max-width: 1280px;
-    /* gap: 104px; */
+    gap: 0;
     flex-direction: raw;
     flex-wrap: wrap;
   }
@@ -265,6 +264,6 @@ section#faq .ac-trigger::-moz-focus-inner {
   }
 
   .ac {
-    width: 592px;
+    /* width: 592px; */
   }
 }

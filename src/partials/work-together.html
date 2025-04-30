@@ -1,49 +1,95 @@
 <section class="work-together" id="work-together">
   <div class="container">
     <div class="work-together-wraper">
-    <div class="left-side">
-      <h1>LET’S <span>WORK TOGETHER</span></h1>
-      <div class="contact-text">CONTACT ME TO TRANSFORM YOUR IDEAS INTO EXCEPTIONAL SOLUTIONS.</div>
-      
+      <div class="left-side">
+        <h1>LET’S <span>WORK TOGETHER</span></h1>
+        <div class="contact-text">
+          CONTACT ME TO TRANSFORM YOUR IDEAS INTO EXCEPTIONAL SOLUTIONS.
+        </div>
 
-      <ul class="contact-info">
-        <li class="li-info-work">
-          <svg class="work-together-icon" width="24" height="24">
-            <use href="/images/footer/symbol-defs.svg#icon-vector-work1" style="fill: var(--Accet-green, #00b068); "></use>
+        <ul class="contact-info">
+          <li class="li-info-work">
+            <svg class="work-together-icon" width="24" height="24">
+              <use
+                href="/images/footer/symbol-defs.svg#icon-vector-work1"
+                style="fill: var(--Accet-green, #00b068)"
+              ></use>
+            </svg>
+            <span><a href="tel:+380984567890">+38 098 456 78 90</a></span>
+          </li>
+          <li class="li-info-work">
+            <svg class="work-together-icon" width="24" height="24">
+              <use
+                href="/images/footer/symbol-defs.svg#icon-vector-work2"
+                style="fill: var(--Accet-green, #00b068); stroke: white"
+              ></use>
+            </svg>
+            <span
+              ><a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=lloydjefferson@gmail.com"
+                >lloydjefferson@gmail.com</a
+              ></span
+            >
+          </li>
+          <li class="li-info-work">
+            <img class="omg-img" src="/images/footer/map-omg.svg" alt="" />
+            <span
+              ><a href="https://maps.app.goo.gl/PPNB9Ns66MCT58eX9"
+                >USA, New York</a
+              ></span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="right-side">
+        <form class="form" id="contactForm">
+          <svg
+            class="email-valid"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <path
+              d="M16 0a15.997 15.997 0 0 1 16 16 16.003 16.003 0 0 1-16 16A16.003 16.003 0 0 1 0 16 16.003 16.003 0 0 1 16 0zm-1.993 19.157L10.453 15.6a1.362 1.362 0 0 0-.97-.401 1.37 1.37 0 0 0-1.372 1.371c0 .364.145.713.402.97l4.526 4.526a1.357 1.357 0 0 0 .971.404 1.38 1.38 0 0 0 .971-.404l9.371-9.374a1.366 1.366 0 0 0 .41-.972 1.368 1.368 0 0 0-.848-1.275 1.384 1.384 0 0 0-1.055.003c-.167.07-.318.173-.445.302l-8.405 8.405z"
+            />
           </svg>
-          <span><a href="tel:+380984567890">+38 098 456 78 90</a></span>
-        </li>
-        <li class="li-info-work">
-          <svg class="work-together-icon" width="24" height="24">
-            <use href="/images/footer/symbol-defs.svg#icon-vector-work2" style="fill: var(--Accet-green, #00b068); stroke: white"></use>
-          </svg>
-          <span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=lloydjefferson@gmail.com">lloydjefferson@gmail.com</a></span>
-        </li>
-        <li class="li-info-work">
-          <img class="omg-img" src="/images/footer/map-omg.svg" alt="">
-          <span><a href="https://maps.app.goo.gl/PPNB9Ns66MCT58eX9">USA, New York</a></span>
-        </li>
-      </ul>
-  
-      <!-- <div class="contact-info">
-        <div><img src="phone.svg" alt="Phone"> +38 090 456 78 90</div>
-        <div><img src="mail.svg" alt="Email"> lloydjefferson@gmail.com</div>
-        <div><img src="location.svg" alt="Location"> USA, New York</div>
-      </div> -->
-    </div>
-
-    <div class="right-side">
-      <form class="form">
-        <input type="email" placeholder="Your email*" required>
-        <textarea placeholder="Message" style="height: 128px;"></textarea>
-        <button type="button" onclick="openModal()">SEND MESSAGE</button>
-      </form>
+          <input type="text" placeholder="Your email*" />
+          <p class="form-error">Invalid email, try again</p>
+          <textarea placeholder="Message" style="height: 128px"></textarea>
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
     </div>
   </div>
-  
-    
-  </div>
-  </div>
-
 </section>
 <script type="module" src="./js/work-together.js"></script>
+
+<!-- Popup -->
+<div class="popup-overlay visually-hidden" id="popupOverlay"></div>
+<div class="popup visually-hidden" id="popup">
+  <div class="popup-content">
+    <svg
+      class="popup-close"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      fill="none"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2.667"
+        d="M24 8 8 24M8 8l16 16"
+      />
+    </svg>
+
+    <h2 class="popup-title">THANK YOU FOR YOUR INTEREST IN COOPERATION!</h2>
+    <p class="popup-text">
+      The manager will contact you shortly to discuss further details and
+      opportunities for cooperation. Please stay in touch.
+    </p>
+  </div>
+</div>
+<!-- </div> -->

@@ -1,7 +1,7 @@
-:root {
-  color: initial;
-  background-color: initial;
-}
+/* [data-theme='dark'] .hero {
+  background-color: var(--black-dt);
+} */
+
 .accet {
   color: var(--accet-green);
   fill: var(--accet-green);

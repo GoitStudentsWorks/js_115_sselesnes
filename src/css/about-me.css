@@ -1,12 +1,3 @@
-:root {
-  --color-text-markup: var(--black);
-  --color-accet-markup: var(--accet-green);
-}
-[data-theme='dark'] {
-  --color-text-markup: var(--white);
-  --color-accet-markup: var(--accet-green-dt);
-}
-
 /* ---------- Мобилка ---------- */
 .about-me {
   padding-top: 80px;
