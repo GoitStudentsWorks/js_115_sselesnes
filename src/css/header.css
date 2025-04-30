@@ -25,8 +25,8 @@
     --color-error: #E74A3B;
 
     /* Header Variables */
-    --header-height: 60px;
-    --header-height-tablet: 80px;
+    --header-height: 64px;
+    --header-height-tablet: 96px;
     --container-padding: 32px;
 
     /* Theme Switch Variables */
@@ -89,6 +89,7 @@ body {
     background-color: var(--color-background);
     z-index: 100;
     transition: background-color 0.3s ease;
+    user-select: none;
 }
 
 .header-container {
@@ -97,7 +98,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 var(--container-padding);
+    padding: 0 16px;
     max-width: 1280px;
 }
 
@@ -159,7 +160,7 @@ body {
     color: var(--color-accent);
 }
 
-/* Кнопки меню */
+/* Кнопка меню */
 .menu-buttons {
     position: relative;
     width: 24px;
@@ -204,9 +205,8 @@ body {
 
 /* Перемикач теми */
 .theme-switch {
-    display: none;
+    display: flex;
     align-items: center;
-    margin-right: 16px;
     cursor: pointer;
     width: var(--container-width);
     height: var(--container-height);
@@ -359,18 +359,13 @@ body {
 
 /* Медіа-запити */
 @media screen and (min-width: 768px) {
-    .header-container {
-        width: 768px;
-        padding: 0 32px;
-    }
-
     .header {
         height: var(--header-height-tablet);
     }
 
     .header-container {
-        padding-top: 24px;
-        padding-bottom: 24px;
+        width: 786px;
+        padding: 0 32px;
     }
 
     .nav {
@@ -388,7 +383,8 @@ body {
     }
 
     .theme-switch {
-        display: flex;
+        margin-left: auto;
+        margin-right: 24px;
     }
 }
 
@@ -409,4 +405,92 @@ body {
     .nav-list {
         gap: 40px;
     }
+
+    .theme-switch {
+        margin-right: 24;
+    cursor: pointer;
+    width: var(--container-width);
+    height: var(--container-height);
+    
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-container {
+        width: 100%;
+        max-width: 360px;
+        padding: 0 16px;
+    }
+
+    .header {
+        height: var(--header-height);
+    }
+
+    .menu-buttons {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .theme-switch {
+        margin: 0 auto;
+    }
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--color-background);
+    z-index: 98;
+    padding: 32px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+/* Particles Container */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* Навигация в мобильном меню */
+.mobile-menu .nav {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.mobile-menu .nav-link {
+    font-size: 20px;
+    color: var(--color-primary);
+    transition: color 0.3s ease;
 } 

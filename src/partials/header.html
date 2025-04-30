@@ -1,8 +1,4 @@
 <header class="header" id="header">
-  <div class="container"></div>
-</header>
-<script type="module" src="./js/header.js"></script>
-<header class="header">
   <div class="container header-container">
     <div class="header-left">
       <a href="/" class="logo">
@@ -11,26 +7,24 @@
         ><span class="logo-dot">.</span>
       </a>
     </div>
+    <label class="theme-switch">
+      <input type="checkbox" class="theme-switch__checkbox" />
+      <div class="theme-switch__container">
+        <div class="theme-switch__circle-container">
+          <div class="theme-switch__sun-moon-container">
+            <div class="theme-switch__moon">
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+            </div>
+          </div>
+        </div>
+        <div class="theme-switch__clouds"></div>
+        <div class="theme-switch__stars"></div>
+      </div>
+    </label>
     <nav class="nav">
       <div class="nav-wrapper">
-        <div class="switch-wrapper">
-          <label class="theme-switch">
-            <input type="checkbox" class="theme-switch__checkbox" />
-            <div class="theme-switch__container">
-              <div class="theme-switch__circle-container">
-                <div class="theme-switch__sun-moon-container">
-                  <div class="theme-switch__moon">
-                    <div class="theme-switch__spot"></div>
-                    <div class="theme-switch__spot"></div>
-                    <div class="theme-switch__spot"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="theme-switch__clouds"></div>
-              <div class="theme-switch__stars"></div>
-            </div>
-          </label>
-        </div>
         <ul class="nav-list">
           <li class="nav-item" id="about-me-link">
             <a href="#about-me" class="nav-link">About me</a>
@@ -57,6 +51,17 @@
       </button>
     </div>
   </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div id="particles-js"></div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#about-me" class="nav-link">About me</a></li>
+        <li class="nav-item"><a href="#my-projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#work-together" class="nav-link">Contacts</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<script type="module" src="../js/header.js"></script>
+<script type="module" src="./js/header.js"></script>
