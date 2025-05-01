@@ -6,6 +6,7 @@ const popupCloseBtn = document.querySelector('.popup-close');
 const popup = document.getElementById('popup');
 
 let isValid = true;
+let isMessageSent = false;
 let scrollbarWidth = 0;
 
 function validateForm() {
@@ -49,7 +50,7 @@ function handleOverlayClick() {
 }
 
 function popupClose() {
-  form.reset();
+  isMessageSent && form.reset();
   popupOverlay.classList.add('visually-hidden');
   popup.classList.add('visually-hidden');
 
@@ -115,6 +116,7 @@ async function sendFeedback(email, message) {
     if (responseData && responseData.title && responseData.message) {
       popupTitle.textContent = responseData.title;
       popupText.textContent = responseData.message;
+      isMessageSent = true;
     } else {
       console.error('server response error', error);
     }
