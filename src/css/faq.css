@@ -38,31 +38,27 @@
 /* accordion */
 .accordion-container {
   margin-top: 40px;
-  flex: 1;
-  max-width: 320px;
   height: auto;
 }
 
 .ac {
   display: flex;
   flex-direction: column;
-  width: 320px;
   padding: 28px 24px;
   align-items: flex-start;
   transition: background-color 0.3s ease;
   border-bottom: 1px solid var(--light-grey);
-  background-color: white; /* Додаємо білий фон для неактивного стану */
-  border: none;
+  background-color: white;
   outline: none;
 }
 [data-theme='dark'] .ac {
-  background-color: transparent; /* Видалив колір фону*/
+  background-color: transparent;
   border: none;
-  border-bottom: 1px solid var(--white-dt); /*нижній бордер*/
+  border-bottom: 1px solid var(--white-dt);
 }
 
 [data-theme='dark'] .ac.is-active {
-  background-color: transparent; /* Активний стан також не матиме фону */
+  background-color: transparent;
   border-radius: 16px;
 }
 
@@ -71,14 +67,14 @@
   display: flex;
   width: 100%;
 
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .ac-trigger {
+  width: 100%;
   position: relative;
   overflow: hidden;
-  max-width: 250px;
-  padding-right: 16px;
+  padding-right: 32px;
   background-color: transparent;
   text-transform: uppercase;
   background: none;
@@ -109,7 +105,7 @@
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  right: 1px;
+  right: -6px;
   top: 50%;
   transform: translateY(-50%);
   filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(0)
@@ -151,11 +147,11 @@
 .ac.is-active {
   background-color: var(--light-accent, #bcdfd1);
   border: 0;
-  border-radius: 16px; /* Залишаємо радіус лише для активного стану */
+  border-radius: 16px;
 }
 [data-theme='dark'] .ac.is-active {
   background-color: var(--dark-accet-dt);
-  border-radius: 16px; /* Залишаємо радіус лише для активного стану */
+  border-radius: 16px;
 }
 
 .ac.is-active .ac-trigger {
@@ -176,22 +172,17 @@
   padding-top: 12px;
 }
 
-/* */
-/* === ТЕМНА ТЕМА: всі НЕактивні заголовки білі === */
 [data-theme='dark'] section#faq .ac:not(.is-active) .ac-trigger {
-  /* специфічність: 0,4,0 (attribute + element#id + class + pseudo-class) */
   color: var(--white-dt);
 }
 
-/* === Видаляємо рамки/обводки/тіні === */
 section#faq .ac-trigger {
-  border: 0; /* прибирає будь-які border */
-  background: none; /* прибирає background із кнопки */
-  outline: none; /* прибирає контур при фокусі */
-  box-shadow: none; /* прибирає тінь, якщо додається */
+  border: 0;
+  background: none;
+  outline: none;
+  box-shadow: none;
 }
 
-/* Для Firefox-специфіки: */
 section#faq .ac-trigger::-moz-focus-inner {
   border: 0;
 }
@@ -216,17 +207,12 @@ section#faq .ac-trigger::-moz-focus-inner {
   /* accordion */
   .accordion-container {
     margin-top: 60px;
-    width: 704px;
     height: auto;
   }
 
   .ac {
     width: 704px;
   }
-}
-
-.ac-trigger {
-  max-width: 600px;
 }
 
 /* DESKTOP */
@@ -236,7 +222,7 @@ section#faq .ac-trigger::-moz-focus-inner {
   }
   .faq-container {
     max-width: 1280px;
-    /* gap: 104px; */
+    gap: 0;
     flex-direction: raw;
     flex-wrap: wrap;
   }
@@ -265,6 +251,6 @@ section#faq .ac-trigger::-moz-focus-inner {
   }
 
   .ac {
-    width: 592px;
+    width: 688px;
   }
 }
