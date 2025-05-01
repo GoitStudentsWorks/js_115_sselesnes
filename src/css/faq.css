@@ -224,7 +224,7 @@ section#faq .ac-trigger::-moz-focus-inner {
 }
 
 .ac-trigger {
-  max-width: 600px;
+  /* max-width: 600px; */
 }
 
 /* DESKTOP */
