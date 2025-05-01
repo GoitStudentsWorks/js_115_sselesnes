@@ -1,17 +1,17 @@
 :root {
   --black: #292929;
-  --accent-green: #00b068;
+  --accet-green: #00b068;
   --white: #f0f0f0;
   --light-grey: #e4e5e6;
   --hover-grey: #bbb;
   --light-accent: #bcdfd1;
   --hover: #009156;
   --black-dt: #1e2023;
-  --accent-green-dt: #14c57c;
+  --accet-green-dt: #14c57c;
   --white-dt: #f0f0f0;
   --charcoal-dt: #2a2d32;
   --hover-charcoal-dt: #3b3f45;
-  --dark-accent-dt: #204136;
+  --dark-accet-dt: #204136;
   --hover-green-dt: #009156;
   --error: #e74a3b;
 
@@ -24,8 +24,6 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--black);
-  background-color: var(--white);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
