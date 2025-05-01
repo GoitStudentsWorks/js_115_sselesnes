@@ -1,6 +1,4 @@
 const form = document.querySelector('.form');
-// const emailInput = form.querySelector('input[type="text"]');
-// const messageInput = form.querySelector('textarea');
 const emailErrorMsg = document.querySelector('.form-error');
 const emailValidMsg = document.querySelector('.email-valid');
 const popupOverlay = document.getElementById('popupOverlay');
@@ -13,11 +11,13 @@ let scrollbarWidth = 0;
 function validateForm() {
   const formData = new FormData(form);
   const email = formData.get('email').trim();
+  const message = formData.get('message').trim();
 
   if (!isValidEmail(email)) {
     emailErrorMsg.style.display = 'block';
     isValid = false;
   } else {
+    sendFeedback(email, message);
     openModal();
     emailValidMsg.style.display = 'none';
   }
@@ -82,7 +82,7 @@ function formSubmitHandle(event) {
   validateForm();
 }
 
-function formInputHandle(event) {
+function formInputHandle() {
   const formData = new FormData(form);
   const email = formData.get('email').trim();
 
@@ -90,6 +90,36 @@ function formInputHandle(event) {
   emailValidMsg.style.display = 'none';
   if (isValidEmail(email)) {
     emailValidMsg.style.display = 'block';
+  }
+}
+
+async function sendFeedback(email, message) {
+  const apiUrl = 'https://portfolio-js.b.goit.study/api/requests';
+  const dataToSend = { email: email, comment: message };
+  const popupTitle = popup.querySelector('.popup-title');
+  const popupText = popup.querySelector('.popup-text');
+  try {
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataToSend),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! ${response.status}`);
+    }
+
+    const responseData = await response.json();
+    if (responseData && responseData.title && responseData.message) {
+      popupTitle.textContent = responseData.title;
+      popupText.textContent = responseData.message;
+    } else {
+      console.error('server response error', error);
+    }
+  } catch (error) {
+    console.error('request send error', error);
   }
 }
 
