@@ -6,9 +6,10 @@ const popupCloseBtn = document.querySelector('.popup-close');
 const popup = document.getElementById('popup');
 
 let isValid = true;
+let isMessageSent = false;
 let scrollbarWidth = 0;
 
-function validateForm() {
+async function validateForm() {
   const formData = new FormData(form);
   const email = formData.get('email').trim();
   const message = formData.get('message').trim();
@@ -17,7 +18,7 @@ function validateForm() {
     emailErrorMsg.style.display = 'block';
     isValid = false;
   } else {
-    sendFeedback(email, message);
+    await sendFeedback(email, message);
     openModal();
     emailValidMsg.style.display = 'none';
   }
@@ -42,20 +43,24 @@ function openModal() {
   document.body.style.overflow = 'hidden';
 
   popupOverlay.addEventListener('click', handleOverlayClick);
+  document.addEventListener('keydown', handleOverlayClick);
 }
 
-function handleOverlayClick() {
-  popupClose();
+function handleOverlayClick(event) {
+  if (event.type == 'click' || event.key == 'Escape') {
+    popupClose();
+  }
 }
 
 function popupClose() {
-  form.reset();
+  isMessageSent && form.reset();
   popupOverlay.classList.add('visually-hidden');
   popup.classList.add('visually-hidden');
 
   document.body.style.paddingRight = '';
   document.body.style.overflow = '';
   popupOverlay.removeEventListener('click', handleOverlayClick);
+  document.removeEventListener('keydown', handleOverlayClick);
   // document.body.style.transition = 'all 0.3s ease';git
 }
 
@@ -115,6 +120,7 @@ async function sendFeedback(email, message) {
     if (responseData && responseData.title && responseData.message) {
       popupTitle.textContent = responseData.title;
       popupText.textContent = responseData.message;
+      isMessageSent = true;
     } else {
       console.error('server response error', error);
     }
