@@ -1,10 +1,6 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-const pathSprite = '/images/my-projects/sprite.svg'
-
-
 AOS.init();
-
 const allProjects = [
   {
     src1x: './my-projects/rectangle-11-1x.jpg',
@@ -77,15 +73,11 @@ const allProjects = [
     link: 'https://github.com/sselesnes/project-group-09',
   },
 ];
-
 const BASE_URL = import.meta.env.BASE_URL;
-
 const gallery = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.btn-load-more-my-project');
-
 let currentIndex = 0;
 const batchSize = 3;
-
 function createGallery(projects) {
   const markup = projects
     .map(({ src1x, src2x, src, alt, link }) => {
@@ -105,9 +97,9 @@ function createGallery(projects) {
           <h3 class="names-my-project">${alt}</h3>
           <button class="button-my-project" onclick="window.open('${link}', '_blank')">
             <span class="visit-my-project">VISIT</span>
-            <svg class="svg-my-project" height="24" width="24">
-              <use class="svg-visit-my-project" href="${pathSprite}#icon-visit-arrow"></use>
-            </svg>
+             <svg class="svg-my-project" height="24" width="24">
+             <use class="svg-visit-my-project"
+              href='#icon-visit-arrow'></use></svg>
           </button>
         </div>
       </li>
@@ -116,31 +108,26 @@ function createGallery(projects) {
     .join('');
   gallery.insertAdjacentHTML('beforeend', markup);
 }
-
 async function loadNextProjects(shouldScroll = true) {
   loadMoreBtn.disabled = true;
   loadMoreBtn.classList.add('disabled');
-
-  const nextProjects = allProjects.slice(currentIndex, currentIndex + batchSize);
+  const nextProjects = allProjects.slice(
+    currentIndex,
+    currentIndex + batchSize
+  );
   const previousLastItem = gallery.lastElementChild;
-
   await new Promise(resolve => setTimeout(resolve, 200));
-
   createGallery(nextProjects);
-
   const newFirstCard = previousLastItem
     ? previousLastItem.nextElementSibling
     : gallery.firstElementChild;
-
   if (shouldScroll && newFirstCard) {
     newFirstCard.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });
   }
-
   currentIndex += nextProjects.length;
-
   if (currentIndex >= allProjects.length) {
     loadMoreBtn.style.display = 'none';
   } else {
@@ -148,6 +135,5 @@ async function loadNextProjects(shouldScroll = true) {
     loadMoreBtn.classList.remove('disabled');
   }
 }
-
 loadMoreBtn.addEventListener('click', loadNextProjects);
 loadNextProjects(false);
