@@ -56,7 +56,7 @@
     cursor: pointer;
     animation-direction: normal;
     
-    animation: marqueeLine 15s linear infinite;
+    animation: marqueeLine 30s linear infinite;
 }
 
 [data-theme='dark'] .marquee-inner {
@@ -85,7 +85,7 @@
     cursor: pointer;
     animation-direction: normal;
 
-    animation: marqueeLine 15s linear infinite;
+    animation: marqueeLine 30s linear infinite;
 }
 
 [data-theme='dark'] .marquee-inner-rotate {
