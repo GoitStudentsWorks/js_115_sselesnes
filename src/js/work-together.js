@@ -9,7 +9,7 @@ let isValid = true;
 let isMessageSent = false;
 let scrollbarWidth = 0;
 
-function validateForm() {
+async function validateForm() {
   const formData = new FormData(form);
   const email = formData.get('email').trim();
   const message = formData.get('message').trim();
@@ -18,7 +18,7 @@ function validateForm() {
     emailErrorMsg.style.display = 'block';
     isValid = false;
   } else {
-    sendFeedback(email, message);
+    await sendFeedback(email, message);
     openModal();
     emailValidMsg.style.display = 'none';
   }
