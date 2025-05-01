@@ -143,7 +143,7 @@
 .form-error {
   display: none;
   position: absolute;
-  color: #e74a3b;
+  color: var(--error);
   font-size: 12px;
   font-weight: 300;
   line-height: 16px; /* 133.333% */
@@ -168,6 +168,7 @@
   border-radius: 8px;
   padding: 16px;
   font-size: 16px;
+  color: var(--color-primary);
   resize: none;
 }
 
