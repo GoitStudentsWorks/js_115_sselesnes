@@ -27,12 +27,6 @@ async function fetchReviews() {
   }
 }
 
-{
-  /* <picture>
-    <source srcset="${review.image1x} 1x, ${review.image2x} 2x" type="image/webp" />
-     */
-}
-//  </picture>
 function renderReviews(reviews) {
   console.log(reviews);
   REVIEWS_LIST.innerHTML = reviews
@@ -41,7 +35,6 @@ function renderReviews(reviews) {
         <li class="swiper-slide reviews-list-item" >
         <p class="reviews-list-item-text">${review.review}</p>
         <div class="reviews-list-item-author">
-        
         <img 
             class="reviews-list-item-img"
             src="${review.avatar_url}"

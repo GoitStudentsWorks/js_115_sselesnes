@@ -17,7 +17,12 @@
   line-height: 1.23;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--black);
+  text-align: center;
+}
+
+[data-theme="dark"] .reviews-title {
+  color: var(--white-dt);
 }
 
 .reviews-list {
@@ -28,8 +33,12 @@
 .reviews-list-item {
   border-radius: 16px;
   padding: 32px;
-  background-color: #e4e5e6;
+  background-color: var(--light-grey);
   margin-top: 40px;
+}
+
+[data-theme="dark"] .reviews-list-item {
+  background-color: var(--charcoal-dt);
 }
 
 .reviews-list-item:last-child {
@@ -42,7 +51,11 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #292929;
+  color: var(--black);
+}
+
+[data-theme="dark"] .reviews-list-item-text {
+  color: var(--white-dt);
 }
 
 .reviews-list-item-author {
@@ -62,7 +75,11 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #292929;
+  color: var(--black);
+}
+
+[data-theme="dark"] .reviews-list-item-name {
+  color: var(--white-dt);
 }
 
 .reviews-list-btns {
@@ -77,10 +94,10 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  border: 1px solid #292929;
+  border: 1px solid var(--black);
   width: 40px;
   height: 40px;
-  stroke: #292929;
+  stroke: var(--black);
   fill: transparent;
 }
 
@@ -108,7 +125,7 @@
     line-height: 1.14815;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #292929;
+    color: var(--black);
   }
 
   /* .reviews-list {
@@ -117,14 +134,16 @@
   .reviews-list-item {
     margin-top: 60px;
   }
+
   .reviews-list-item-text {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: #292929;
+    color: var(--black);
   }
+
   /* .reviews-list-item-author {
   } */
   /* .reviews-list-item-img {
@@ -135,7 +154,7 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: #292929;
+    color: var(--black);
   }
 
   /* .reviews-list-btns {
@@ -165,7 +184,7 @@
     line-height: 1.14815;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #292929;
+    color: var(--black);
   }
 
   /* .reviews-list {
@@ -185,7 +204,7 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: #292929;
+    color: var(--black);
   }
 
   /* .reviews-list-item-author {
@@ -200,7 +219,7 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: #292929;
+    color: var(--black);
   }
 
   /* .reviews-list-btns {
