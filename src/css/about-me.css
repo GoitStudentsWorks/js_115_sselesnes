@@ -1,16 +1,7 @@
-:root {
-  --color-text-markup: var(--black);
-  --color-accet-markup: var(--accet-green);
-}
-[data-theme='dark'] {
-  --color-text-markup: var(--white);
-  --color-accet-markup: var(--accet-green-dt);
-}
-
 /* ---------- Мобилка ---------- */
 .about-me {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .about-me_title {
@@ -153,8 +144,8 @@
 /* ---------- Планшет ---------- */
 @media only screen and (min-width: 768px) {
   .about-me {
-    padding-top: 62px;
-    padding-bottom: 62px;
+    padding-top: 124px;
+    padding-bottom: 124px;
   }
 
   .about-me_title {
@@ -243,8 +234,8 @@
 /* ---------- Десктоп ---------- */
 @media only screen and (min-width: 1280px) {
   .about-me {
-    padding-top: 82px;
-    padding-bottom: 82px;
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
 
   .about-me_info {
