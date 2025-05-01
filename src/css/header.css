@@ -362,7 +362,7 @@ body {
 /* Медіа-запити */
 @media screen and (min-width: 768px) {
   .header {
-    left: -32px;
+    /* left: -32px; */
     height: var(--header-height-tablet);
   }
   .logo {

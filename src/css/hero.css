@@ -1,7 +1,9 @@
 /* [data-theme='dark'] .hero {
   background-color: var(--black-dt);
 } */
-
+body {
+  overflow-x: hidden;
+}
 .accet {
   color: var(--accet-green);
   fill: var(--accet-green);

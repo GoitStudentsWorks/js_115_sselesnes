@@ -214,7 +214,7 @@
 
   .contact-info {
     display: flex;
-    gap: 8px;
+    gap: 16px;
     margin-bottom: 24px;
     justify-content: flex-start;
     flex-direction: row;
