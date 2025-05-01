@@ -28,6 +28,7 @@ async function fetchReviews() {
 }
 
 function renderReviews(reviews) {
+  console.log(reviews);
   REVIEWS_LIST.innerHTML = reviews
     .map(
       review => `
