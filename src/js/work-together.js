@@ -1,4 +1,5 @@
 const form = document.querySelector('.form');
+const formEmailInput = form.querySelector('input[name="email"]');
 const emailErrorMsg = document.querySelector('.form-error');
 const emailValidMsg = document.querySelector('.email-valid');
 const popupOverlay = document.getElementById('popupOverlay');
@@ -16,6 +17,7 @@ async function validateForm() {
 
   if (!isValidEmail(email)) {
     emailErrorMsg.style.display = 'block';
+    formEmailInput.style.color = 'var(--error)';
     isValid = false;
   } else {
     await sendFeedback(email, message);
@@ -90,7 +92,7 @@ function formSubmitHandle(event) {
 function formInputHandle() {
   const formData = new FormData(form);
   const email = formData.get('email').trim();
-
+  formEmailInput.style.color = 'var(--color-primary)';
   emailErrorMsg.style.display = 'none';
   emailValidMsg.style.display = 'none';
   if (isValidEmail(email)) {
