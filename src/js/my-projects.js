@@ -1,6 +1,5 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-const pathSprite = '/images/my-projects/sprite.svg';
 AOS.init();
 const allProjects = [
   {
@@ -98,9 +97,9 @@ function createGallery(projects) {
           <h3 class="names-my-project">${alt}</h3>
           <button class="button-my-project" onclick="window.open('${link}', '_blank')">
             <span class="visit-my-project">VISIT</span>
-            <svg class="svg-my-project" height="24" width="24">
-              <use class="svg-visit-my-project" href="${pathSprite}#icon-visit-arrow"></use>
-            </svg>
+             <svg class="svg-my-project" height="24" width="24">
+             <use class="svg-visit-my-project"
+              href='#icon-visit-arrow'></use></svg>
           </button>
         </div>
       </li>
