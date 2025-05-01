@@ -1,40 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeSwitch = document.querySelector('.theme-switch__checkbox');
     const html = document.documentElement;
-    const body = document.body;
-    
+  
     if (!themeSwitch) {
-        console.warn('Theme switch element not found');
-        return;
+      console.warn('Theme switch element not found');
+      return;
     }
-    
+  
+    const setTheme = isDark => {
+      html.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      themeSwitch.checked = isDark;
+    };
+  
     try {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        const setTheme = (isDark) => {
-            html.setAttribute('data-theme', isDark ? 'dark' : 'light');
-            themeSwitch.checked = isDark;
-            body.style.backgroundColor = isDark ? '#1a1a1a' : '#FFFFFF';
-            body.style.color = isDark ? '#FFFFFF' : '#333333';
-        };
-
-        setTheme(savedTheme === 'dark' || (!savedTheme && prefersDark));
-
-        themeSwitch.addEventListener('change', () => {
-            const isDark = themeSwitch.checked;
-            setTheme(isDark);
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
-
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        mediaQuery.addEventListener('change', (e) => {
-            if (!localStorage.getItem('theme')) {
-                setTheme(e.matches);
-            }
-        });
-
+      setTheme(false);
+      const savedTheme = localStorage.getItem('theme');
+  
+      if (savedTheme === 'dark') {
+        setTheme(true);
+      } else if (!savedTheme) {
+        const prefersDark = window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches;
+        if (prefersDark) {
+          setTheme(true);
+        }
+      }
+  
+      const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+      darkThemeMq.addEventListener('change', e => {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches);
+        }
+      });
+  
+      themeSwitch.addEventListener('change', () => {
+        const isDark = themeSwitch.checked;
+        setTheme(isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
     } catch (error) {
-        console.error('Error in theme initialization:', error);
+      console.error('Error in theme initialization:', error);
     }
-}); 
+  });
+  
