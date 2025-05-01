@@ -43,10 +43,13 @@ function openModal() {
   document.body.style.overflow = 'hidden';
 
   popupOverlay.addEventListener('click', handleOverlayClick);
+  document.addEventListener('keydown', handleOverlayClick);
 }
 
-function handleOverlayClick() {
-  popupClose();
+function handleOverlayClick(event) {
+  if (event.type == 'click' || event.key == 'Escape') {
+    popupClose();
+  }
 }
 
 function popupClose() {
@@ -57,6 +60,7 @@ function popupClose() {
   document.body.style.paddingRight = '';
   document.body.style.overflow = '';
   popupOverlay.removeEventListener('click', handleOverlayClick);
+  document.removeEventListener('keydown', handleOverlayClick);
   // document.body.style.transition = 'all 0.3s ease';git
 }
 
