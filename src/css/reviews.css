@@ -4,7 +4,7 @@
   --third-family: 'Montserrat', sans-serif;
 }
 
-/* ---------- Мобилка ---------- */
+/* ---------- РњРѕР±РёР»РєР° ---------- */
 .reviews {
   padding-top: 80px;
   padding-bottom: 40px;
@@ -110,7 +110,7 @@
   margin-top: 40px;
 }
 
-/* ---------- Планшет ---------- */
+/* ---------- РџР»Р°РЅС€РµС‚ ---------- */
 @media only screen and (min-width: 768px) {
   .reviews {
     padding-top: 124px;
@@ -150,7 +150,7 @@
   }
 }
 
-/* ---------- Десктоп ---------- */
+/* ---------- Р”РµСЃРєС‚РѕРї ---------- */
 @media only screen and (min-width: 1280px) {
   .reviews {
     padding-top: 164px;
