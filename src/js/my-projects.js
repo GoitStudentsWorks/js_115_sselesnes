@@ -142,7 +142,7 @@ window.addEventListener('scroll', () => {
     document.body.scrollTop > 300 ||
     document.documentElement.scrollTop > 300
   ) {
-    scrollTopBtn.style.display = 'block';
+    scrollTopBtn.style.display = 'flex';
   } else {
     scrollTopBtn.style.display = 'none';
   }
