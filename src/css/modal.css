@@ -53,6 +53,7 @@
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 /* Decorative Background */
 .mobile-menu::after {
     content: '';
@@ -69,6 +70,8 @@
     pointer-events: none;
 }
 
+=======
+>>>>>>> 7eec0cba2bbb75da4f7c24ec3c7a5166a9a3e152
 /* Particles Container */
 #particles-js {
     position: absolute;
@@ -156,6 +159,15 @@
 }
 
 /* Menu Open State */
+<<<<<<< HEAD
+=======
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+>>>>>>> 7eec0cba2bbb75da4f7c24ec3c7a5166a9a3e152
 body.menu-open .burger-menu {
     display: none;
 }

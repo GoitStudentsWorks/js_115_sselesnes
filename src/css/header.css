@@ -83,7 +83,10 @@ body {
 .header {
   position: fixed;
   top: 0;
+<<<<<<< HEAD
   /* left: -32px; */
+=======
+>>>>>>> 7eec0cba2bbb75da4f7c24ec3c7a5166a9a3e152
   width: 100%;
   height: var(--header-height);
   background-color: var(--color-background);
@@ -98,8 +101,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+<<<<<<< HEAD
   /* padding: 0 16px; */
   /* max-width: 1280px; */
+=======
+
+>>>>>>> 7eec0cba2bbb75da4f7c24ec3c7a5166a9a3e152
 }
 
 .header-left {
@@ -362,7 +369,10 @@ body {
 /* Медіа-запити */
 @media screen and (min-width: 768px) {
   .header {
+<<<<<<< HEAD
     /* left: -32px; */
+=======
+>>>>>>> 7eec0cba2bbb75da4f7c24ec3c7a5166a9a3e152
     height: var(--header-height-tablet);
   }
   .logo {
@@ -372,11 +382,14 @@ body {
     letter-spacing: 1.5px;
   }
 
+<<<<<<< HEAD
   .header-container {
     /* width: 768px;
     padding: 0 32px; */
   }
 
+=======
+>>>>>>> 7eec0cba2bbb75da4f7c24ec3c7a5166a9a3e152
   .nav {
     display: block;
   }
@@ -404,11 +417,15 @@ body {
 
   .header-container {
     width: 1280px;
+<<<<<<< HEAD
     /* padding: 0 100px; */
   }
 
   .logo {
     /* font-size: 24px; */
+=======
+  
+>>>>>>> 7eec0cba2bbb75da4f7c24ec3c7a5166a9a3e152
   }
 
   .nav-wrapper {
@@ -432,7 +449,10 @@ body {
   .header-container {
     width: 100%;
     max-width: 360px;
+<<<<<<< HEAD
     /* padding: 0 16px; */
+=======
+>>>>>>> 7eec0cba2bbb75da4f7c24ec3c7a5166a9a3e152
   }
 
   .header {
