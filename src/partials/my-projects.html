@@ -4,28 +4,30 @@
       my&nbsp;<span class="hedline-span-my-project">projects</span>
     </h2>
     <ul class="gallery">
-      <!-- + -->
     </ul>
     <button class="btn-load-more-my-project">
       <span class="load-more-span-my-project">LOAD MORE</span>
     </button>
   </div>
-  <svg
-    class="svg-visit-my-project"
-    style="display: none"
-    aria-hidden="true"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-  >
+
+  <button id="scrollTopBtn" class="button-scroll-my-project" title="Go to top">
+    <svg class="svg-my-project" height="24" width="24">
+      <use class="svg-visit-my-project" href="#icon-arrow-up2"></use>
+    </svg>
+  </button>
+
+  <svg class="svg-visit-my-project" style="display: none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+    fill="none">
     <symbol id="icon-visit-arrow" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667"
+        d="M6.333 25.667l19.333-19.333M25.667 6.333h-18M25.667 6.333v18" />
+    </symbol>
+
+    <symbol id="icon-arrow-up2" viewBox="0 0 32 32">
       <path
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        stroke-miterlimit="4"
-        stroke-width="2.6667"
-        d="M6.333 25.667l19.333-19.333M25.667 6.333h-18M25.667 6.333v18"
-      />
+        d="M21 28h-10c-0.552 0-1-0.448-1-1v-11h-4c-0.404 0-0.769-0.244-0.924-0.617s-0.069-0.804 0.217-1.090l10-10c0.391-0.39 1.024-0.39 1.414 0l10 10c0.286 0.286 0.372 0.716 0.217 1.090s-0.519 0.617-0.924 0.617h-4v11c0 0.552-0.448 1-1 1zM12 26h8v-11c0-0.552 0.448-1 1-1h2.586l-7.586-7.586-7.586 7.586h2.586c0.552 0 1 0.448 1 1v11z" />
     </symbol>
   </svg>
 </section>
+
 <script type="module" src="./js/my-projects.js"></script>
