@@ -301,7 +301,7 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 8px;
@@ -347,7 +347,6 @@
 [data-theme='dark'] .social-icon-my-projects {
   fill: currentColor;
 }
-
 @media screen and (min-width: 466px) and (max-width: 767px) {
   .floating-social-my-projects {
     display: flex;
