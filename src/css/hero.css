@@ -4,6 +4,10 @@
 body {
   user-select: none;
   overflow-x: hidden;
+  overflow-y: auto;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 .accet {
   color: var(--accet-green);
