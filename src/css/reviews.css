@@ -4,10 +4,10 @@
   --third-family: 'Montserrat', sans-serif;
 }
 
-/* ---------- Мобилка ---------- */
+/* ---------- РњРѕР±РёР»РєР° ---------- */
 .reviews {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .reviews-title {
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-[data-theme='dark'] .reviews-title {
+[data-theme="dark"] .reviews-title {
   color: var(--white-dt);
 }
 
@@ -36,7 +36,7 @@
   margin-top: 40px;
 }
 
-[data-theme='dark'] .reviews-list-item {
+[data-theme="dark"] .reviews-list-item {
   background-color: var(--charcoal-dt);
 }
 
@@ -53,7 +53,7 @@
   color: var(--black);
 }
 
-[data-theme='dark'] .reviews-list-item-text {
+[data-theme="dark"] .reviews-list-item-text {
   color: var(--white-dt);
 }
 
@@ -77,7 +77,7 @@
   color: var(--black);
 }
 
-[data-theme='dark'] .reviews-list-item-name {
+[data-theme="dark"] .reviews-list-item-name {
   color: var(--white-dt);
 }
 
@@ -103,31 +103,68 @@
 .reviews-btn.disabled {
   opacity: 0.4;
   pointer-events: none;
+  cursor: default;
 }
 
-/* ---------- Планшет ---------- */
+.reviews-list-item {
+  margin-top: 40px;
+}
+
+/* ---------- РџР»Р°РЅС€РµС‚ ---------- */
 @media only screen and (min-width: 768px) {
   .reviews {
     padding-top: 124px;
-    padding-bottom: 124px;
+    padding-bottom: 62px;
   }
 
   .reviews-title {
+    font-family: 'Impact', sans-serif;
+    font-weight: 400;
     font-size: 108px;
-    line-height: 1.14;
+    line-height: 1.14815;
     letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--black);
   }
 
   .reviews-list-item {
     margin-top: 60px;
   }
+
+  .reviews-list-item-text {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--black);
+  }
+
+  .reviews-list-item-name {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--black);
+  }
 }
 
-/* ---------- Десктоп ---------- */
+/* ---------- Р”РµСЃРєС‚РѕРї ---------- */
 @media only screen and (min-width: 1280px) {
   .reviews {
     padding-top: 164px;
-    padding-bottom: 164px;
+    padding-bottom: 82px;
+  }
+
+  .reviews-title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 108px;
+    line-height: 1.14815;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--black);
   }
 
   .reviews-list-item {
@@ -136,6 +173,24 @@
 
   .reviews-list-item:last-child {
     display: inline;
+  }
+
+  .reviews-list-item-text {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--black);
+  }
+
+  .reviews-list-item-name {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--black);
   }
 
   .reviews-btn {
