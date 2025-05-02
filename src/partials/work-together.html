@@ -75,7 +75,7 @@
       <div class="right-side">
         <form class="form" id="contactForm">
           <svg
-            class="email-valid"
+            class="form-email-valid"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
@@ -91,12 +91,13 @@
             placeholder="Your email*"
             autocomplete="off"
           />
-          <p class="form-error">Invalid email, try again</p>
+          <p class="form-email-error">Invalid email, try again</p>
           <textarea
             placeholder="Message"
             name="message"
             style="height: 128px"
           ></textarea>
+          <p class="form-msg-error">Please write something useful for us</p>
           <button type="submit">SEND MESSAGE</button>
         </form>
       </div>

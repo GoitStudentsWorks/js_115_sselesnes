@@ -2,6 +2,7 @@
   background-color: var(--black-dt);
 } */
 body {
+  user-select: none;
   overflow-x: hidden;
 }
 .accet {

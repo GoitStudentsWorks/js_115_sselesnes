@@ -1,7 +1,9 @@
 const form = document.querySelector('.form');
 const formEmailInput = form.querySelector('input[name="email"]');
-const emailErrorMsg = document.querySelector('.form-error');
-const emailValidMsg = document.querySelector('.email-valid');
+const formMsgInput = form.querySelector('textarea[name="message"]');
+const emailErrorMsg = document.querySelector('.form-email-error');
+const msgErrorMsg = document.querySelector('.form-msg-error');
+const emailValidMsg = document.querySelector('.form-email-valid');
 const popupOverlay = document.getElementById('popupOverlay');
 const popupCloseBtn = document.querySelector('.popup-close');
 const popup = document.getElementById('popup');
@@ -11,24 +13,40 @@ let isMessageSent = false;
 let scrollbarWidth = 0;
 
 async function validateForm() {
-  const formData = new FormData(form);
-  const email = formData.get('email').trim();
-  const message = formData.get('message').trim();
-
+  const email = formEmailInput.value.trim();
+  const message = formMsgInput.value.trim();
   if (!isValidEmail(email)) {
     emailErrorMsg.style.display = 'block';
     formEmailInput.style.color = 'var(--error)';
     isValid = false;
   } else {
-    await sendFeedback(email, message);
-    openModal();
-    emailValidMsg.style.display = 'none';
+    isValid = true;
+    if (!message) {
+      msgErrorMsg.style.display = 'block';
+    } else {
+      await sendFeedback(email, message);
+      openModal();
+    }
   }
 }
 
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+}
+
+function formInputHandle() {
+  const email = formEmailInput.value.trim();
+  const message = formMsgInput.value.trim();
+  formEmailInput.style.color = 'var(--color-primary)';
+  emailErrorMsg.style.display = 'none';
+  emailValidMsg.style.display = 'none';
+  if (isValidEmail(email)) {
+    emailValidMsg.style.display = 'block';
+  }
+  if (message) {
+    msgErrorMsg.style.display = 'none';
+  }
 }
 
 // turn off the vertical scrollbar so body doesn't moving by offset
@@ -55,6 +73,7 @@ function handleOverlayClick(event) {
 }
 
 function popupClose() {
+  emailValidMsg.style.display = 'none';
   isMessageSent && form.reset();
   popupOverlay.classList.add('visually-hidden');
   popup.classList.add('visually-hidden');
@@ -87,17 +106,6 @@ function getScrollbarWidth() {
 function formSubmitHandle(event) {
   event.preventDefault();
   validateForm();
-}
-
-function formInputHandle() {
-  const formData = new FormData(form);
-  const email = formData.get('email').trim();
-  formEmailInput.style.color = 'var(--color-primary)';
-  emailErrorMsg.style.display = 'none';
-  emailValidMsg.style.display = 'none';
-  if (isValidEmail(email)) {
-    emailValidMsg.style.display = 'block';
-  }
 }
 
 async function sendFeedback(email, message) {
