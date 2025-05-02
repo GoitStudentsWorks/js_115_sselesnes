@@ -301,7 +301,7 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 12px;
   padding: 8px;
