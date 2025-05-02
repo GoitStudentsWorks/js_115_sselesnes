@@ -29,9 +29,9 @@
 
   /* Theme Switch Variables */
   --toggle-size: 20px;
-  --container-width: 3.2em;
+  --container-width: 3.6em;
   --container-height: 1.6em;
-  --container-radius: 6.25em;
+  --container-radius: 2em;
   --container-light-bg: #3d7eae;
   --container-night-bg: #1d1f2c;
   --circle-container-diameter: 2.2em;
@@ -207,7 +207,6 @@ body {
 /* Перемикач теми */
 .theme-switch {
   display: none;
-  /* display: flex; */
   align-items: center;
   cursor: pointer;
   width: var(--container-width);
