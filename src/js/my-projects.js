@@ -139,8 +139,8 @@ loadMoreBtn.addEventListener('click', loadNextProjects);
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 window.addEventListener('scroll', () => {
   if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
+    document.body.scrollTop > 400 ||
+    document.documentElement.scrollTop > 400
   ) {
     scrollTopBtn.style.display = 'flex';
   } else {
