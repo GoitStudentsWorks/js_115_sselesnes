@@ -179,8 +179,14 @@
   font-size: 16px;
   color: var(--color-primary);
   resize: none;
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none;
+    border-color: inherit;
+  }
 }
-
 .form button {
   background: var(--accet-green);
   color: var(--white);
