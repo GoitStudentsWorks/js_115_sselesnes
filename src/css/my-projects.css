@@ -297,7 +297,8 @@
 }
 
 [data-theme='dark'] #scrollTopBtn {
-  background-color: var(--charcoal-dt);
+  background-color: rgba(from var(--charcoal-dt) r g b / 0.5);
+  border: 1px dotted rgba(from var(--hover-grey) r g b / 0.2);
 }
 
 [data-theme='dark'] #scrollTopBtn:hover {
@@ -343,8 +344,9 @@
 }
 
 [data-theme='dark'] .floating-social-my-projects a {
-  background-color: var(--charcoal-dt);
   color: var(--white-dt);
+  background-color: rgba(from var(--charcoal-dt) r g b / 0.5);
+  border: 1px dotted rgba(from var(--hover-grey) r g b / 0.2);
 }
 
 [data-theme='dark'] .floating-social-my-projects a:hover {
