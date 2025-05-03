@@ -272,12 +272,12 @@
   height: 48px;
   padding: 0;
   margin: 0;
-  border: 1px dotted rgba(from var(--hover-grey) r g b / 0.3);
+  border: none;
   box-sizing: border-box;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background-color: var(--light-grey);
+  background-color: rgba(from var(--hover-grey) r g b / 0.3);
   border-radius: 50%;
   opacity: 0.7;
 }
@@ -322,10 +322,10 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  background-color: var(--light-grey);
   color: var(--color-accent);
   border-radius: 0 8px 8px 0;
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  background-color: rgba(from var(--hover-grey) r g b / 0.3);
 }
 
 .floating-social-my-projects a:hover {
