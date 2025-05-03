@@ -285,7 +285,7 @@
 #scrollTopBtn:hover {
   opacity: 1;
   background: var(--hover-grey);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #scrollTopBtn svg {
