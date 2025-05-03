@@ -105,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (error) {
         console.error('Error destroying particles:', error);
       }
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
 
     burgerMenu.addEventListener('click', () => {
@@ -112,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.add('is-open');
         burgerMenu.classList.add('is-open');
         body.classList.add('menu-open');
+        document.querySelector('#scrollTopBtn').style = 'hidden';
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
         initParticles();
@@ -126,8 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
         burgerMenu.classList.remove('is-open');
         body.classList.remove('menu-open');
         destroyParticles();
-        document.body.style.overflow = '';
-        document.documentElement.style.overflow = '';
       } catch (error) {
         console.error('Error closing menu:', error);
       }

@@ -268,8 +268,8 @@
   bottom: 40px;
   right: 40px;
   z-index: 100;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   padding: 0;
   margin: 0;
   border: none;
@@ -279,6 +279,7 @@
   justify-content: center;
   background-color: var(--light-grey);
   border-radius: 50%;
+  opacity: 0.7;
 }
 
 #scrollTopBtn:hover {
@@ -293,6 +294,14 @@
   max-width: 100%;
   max-height: 100%;
   fill: var(--color-accent);
+}
+
+[data-theme='dark'] #scrollTopBtn {
+  background-color: var(--charcoal-dt);
+}
+
+[data-theme='dark'] #scrollTopBtn:hover {
+  background: var(--hover-charcoal-dt);
 }
 
 .floating-social-my-projects {
