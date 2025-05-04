@@ -282,10 +282,31 @@
   opacity: 0.7;
 }
 
-#scrollTopBtn:hover {
-  opacity: 1;
-  background: var(--hover-grey);
-  transform: scale(1.05);
+[data-theme='dark'] #scrollTopBtn {
+  background-color: rgba(from var(--charcoal-dt) r g b / 0.5);
+  border: 1px dotted rgba(from var(--hover-grey) r g b / 0.2);
+}
+
+/* Щоб не залипала кнопка після натиснення на мобільці */
+@media (pointer: fine) {
+  #scrollTopBtn:hover {
+    opacity: 1;
+    background: var(--hover-grey);
+    transform: scale(1.05);
+  }
+  [data-theme='dark'] #scrollTopBtn:hover {
+    background: var(--hover-charcoal-dt);
+  }
+}
+@media (pointer: coarse) {
+  #scrollTopBtn:active {
+    opacity: 1;
+    background: var(--hover-grey);
+    transform: scale(1.05);
+  }
+  [data-theme='dark'] #scrollTopBtn:active {
+    background: var(--hover-charcoal-dt);
+  }
 }
 
 #scrollTopBtn svg {
@@ -294,15 +315,6 @@
   max-width: 100%;
   max-height: 100%;
   fill: var(--color-accent);
-}
-
-[data-theme='dark'] #scrollTopBtn {
-  background-color: rgba(from var(--charcoal-dt) r g b / 0.5);
-  border: 1px dotted rgba(from var(--hover-grey) r g b / 0.1);
-}
-
-[data-theme='dark'] #scrollTopBtn:hover {
-  background: var(--hover-charcoal-dt);
 }
 
 .floating-social-my-projects {
@@ -328,11 +340,34 @@
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
   background-color: rgba(from var(--hover-grey) r g b / 0.3);
 }
+[data-theme='dark'] .floating-social-my-projects a {
+  color: var(--white-dt);
+  background-color: rgba(from var(--charcoal-dt) r g b / 0.5);
+  border: 1px dotted rgba(from var(--hover-grey) r g b / 0.2);
+}
 
-.floating-social-my-projects a:hover {
-  background-color: var(--hover-grey);
-  color: var(--accent-green);
-  transform: translateX(5px) scale(1.1);
+/* Щоб не залипала кнопка після натиснення на мобільці */
+@media (pointer: fine) {
+  .floating-social-my-projects a:hover {
+    background-color: var(--hover-grey);
+    color: var(--accent-green);
+    transform: translateX(5px) scale(1.1);
+  }
+  [data-theme='dark'] .floating-social-my-projects a:hover {
+    background-color: var(--hover-charcoal-dt);
+    color: var(--accent-green-dt);
+  }
+}
+@media (pointer: coarse) {
+  .floating-social-my-projects a:active {
+    background-color: var(--hover-grey);
+    color: var(--accent-green);
+    transform: translateX(5px) scale(1.1);
+  }
+  [data-theme='dark'] .floating-social-my-projects a:active {
+    background-color: var(--hover-charcoal-dt);
+    color: var(--accent-green-dt);
+  }
 }
 
 .social-icon-my-projects {
@@ -341,17 +376,6 @@
   fill: currentColor;
   /* іконка підтягує колір від color батьків */
   transition: fill 0.3s ease;
-}
-
-[data-theme='dark'] .floating-social-my-projects a {
-  color: var(--white-dt);
-  background-color: rgba(from var(--charcoal-dt) r g b / 0.5);
-  border: 1px dotted rgba(from var(--hover-grey) r g b / 0.1);
-}
-
-[data-theme='dark'] .floating-social-my-projects a:hover {
-  background-color: var(--hover-charcoal-dt);
-  color: var(--accent-green-dt);
 }
 
 [data-theme='dark'] .social-icon-my-projects {
