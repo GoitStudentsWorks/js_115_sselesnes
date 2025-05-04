@@ -25,8 +25,23 @@
   background: var(--black-dt);
 }
 
-[data-theme='dark'] .load-more-span-my-project:hover {
-  color: var(--accent-green-dt);
+/* Щоб не залипала кнопка після натиснення на мобільці */
+@media (pointer: fine) {
+  .load-more-span-my-project:hover {
+    color: var(--accet-green);
+  }
+  [data-theme='dark'] .load-more-span-my-project:hover {
+    color: var(--accet-green-dt);
+  }
+}
+@media (pointer: coarse) {
+  .load-more-span-my-project:active {
+    color: var(--accet-green);
+  }
+
+  [data-theme='dark'] .load-more-span-my-project:active {
+    color: var(--accet-green-dt);
+  }
 }
 
 .hedline-my-projects {
@@ -243,11 +258,6 @@
   }
 }
 
-.load-more-span-my-project:hover,
-.load-more-span-my-project:focus {
-  color: var(--accent-green);
-}
-
 .btn-load-more-my-project.disabled,
 .disabled {
   opacity: 0.5;
@@ -287,7 +297,6 @@
   border: 1px dotted rgba(from var(--hover-grey) r g b / 0.2);
 }
 
-/* Щоб не залипала кнопка після натиснення на мобільці */
 @media (pointer: fine) {
   #scrollTopBtn:hover {
     opacity: 1;
@@ -346,7 +355,6 @@
   border: 1px dotted rgba(from var(--hover-grey) r g b / 0.2);
 }
 
-/* Щоб не залипала кнопка після натиснення на мобільці */
 @media (pointer: fine) {
   .floating-social-my-projects a:hover {
     background-color: var(--hover-grey);
