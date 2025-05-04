@@ -136,7 +136,7 @@
 /* ---------- Десктоп ---------- */
 @media only screen and (min-width: 1280px) {
   .reviews {
-    padding-top: 164px;
+    padding-top: 0;
     padding-bottom: 164px;
   }
 
