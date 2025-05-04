@@ -64,9 +64,9 @@
   stroke: var(--color-primary);
 }
 
-.work-together {
+/* .work-together {
   margin-top: 80px;
-}
+} */
 .work-together-wraper .left-side h1 {
   font-weight: 400;
   font-size: 52px;
