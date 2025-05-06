@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/js_115_sselesnes/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/js_115_sselesnes/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/js_115_sselesnes/favicon-16x16.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project group 09</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    />
+    <script type="module" crossorigin src="/js_115_sselesnes/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_115_sselesnes/assets/vendor-3ryBkWqp.js">
+    <link rel="stylesheet" crossorigin href="/js_115_sselesnes/assets/vendor-D12FVcbw.css">
+    <link rel="stylesheet" crossorigin href="/js_115_sselesnes/assets/index-MYB4edhy.css">
+  </head>
+  <body>
+    <header class="header" id="header">
+  <div class="container header-container">
+    <div class="header-left">
+      <div class="logo">
+        <span class="logo-text">LLOYD</span>
+        <span class="logo-accent">JEFFERSON</span
+        ><span class="logo-dot">.</span>
+      </div>
+    </div>
+    <label class="theme-switch">
+      <input type="checkbox" class="theme-switch__checkbox" />
+      <div class="theme-switch__container">
+        <div class="theme-switch__circle-container">
+          <div class="theme-switch__sun-moon-container">
+            <div class="theme-switch__moon">
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+              <div class="theme-switch__spot"></div>
+            </div>
+          </div>
+        </div>
+        <div class="theme-switch__clouds"></div>
+        <div class="theme-switch__stars"></div>
+      </div>
+    </label>
+    <nav class="nav">
+      <div class="nav-wrapper">
+        <ul class="nav-list">
+          <li class="nav-item" id="about-me-link">
+            <a href="#about-me" class="nav-link">About me</a>
+          </li>
+          <li class="nav-item" id="projects-link">
+            <a href="#my-projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item" id="contacts-link">
+            <a href="#work-together" class="nav-link">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="menu-buttons">
+      <button type="button" class="burger-menu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <button type="button" class="mobile-close" aria-label="Close menu">
+        <svg class="close-icon">
+          <use href="/js_115_sselesnes/assets/sprite-CE0o8y4O.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div id="particles-js"></div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#about-me" class="nav-link">About me</a>
+        </li>
+        <li class="nav-item">
+          <a href="#my-projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#work-together" class="nav-link">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+    <main>
+      <html data-theme="dark">
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <svg
+          class="hero-bg-m"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 15 31"
+          fill="var(--accet-green)"
+        >
+          <path
+            d="M13.089 27.511h-.325a.045.045 0 0 1-.045-.045v-.325c0-.025.02-.045.045-.045h.325c.025 0 .045.02.045.045v.325c0 .025-.02.045-.045.045zM11.736 22.371h-.325a.045.045 0 0 1-.045-.045v-.325c0-.025.02-.045.045-.045h.325c.025 0 .045.02.045.045v.325c0 .025-.02.045-.045.045zM9.996 24.927h-.117a.045.045 0 0 1-.045-.045v-.117c0-.025.02-.045.045-.045h.117c.025 0 .045.02.045.045v.117c0 .025-.02.045-.045.045zM14.409 25.758h-.117a.045.045 0 0 1-.045-.045v-.117c0-.025.02-.045.045-.045h.117c.025 0 .045.02.045.045v.117c0 .025-.02.045-.045.045zM8.725 27.921H8.4a.045.045 0 0 1-.045-.045v-.325c0-.025.02-.045.045-.045h.325c.025 0 .045.02.045.045v.325c0 .025-.02.045-.045.045zM6.909 23.984h-.117a.045.045 0 0 1-.045-.045v-.117c0-.025.02-.045.045-.045h.117c.025 0 .045.02.045.045v.117c0 .025-.02.045-.045.045zM11.825 6.007h-.371a.045.045 0 0 1-.045-.045v-.371c0-.025.02-.045.045-.045h.371c.025 0 .045.02.045.045v.371c0 .025-.02.045-.045.045zM9.985.962h-.371a.045.045 0 0 1-.045-.045V.546c0-.025.02-.045.045-.045h.371c.025 0 .045.02.045.045v.371c0 .025-.02.045-.045.045zM13.985 7.875h-.602a.045.045 0 0 1-.045-.045v-.602c0-.025.02-.045.045-.045h.602c.025 0 .045.02.045.045v.602c0 .025-.02.045-.045.045zM8.349 3.595h-.14a.045.045 0 0 1-.045-.045v-.14c0-.025.02-.045.045-.045h.14c.025 0 .045.02.045.045v.14c0 .025-.02.045-.045.045zM14.758 4.516h-.14a.045.045 0 0 1-.045-.045v-.14c0-.025.02-.045.045-.045h.14c.025 0 .045.02.045.045v.14c0 .025-.02.045-.045.045zM4.14 11.11H4a.045.045 0 0 1-.045-.045v-.14c0-.025.02-.045.045-.045h.14c.025 0 .045.02.045.045v.14c0 .025-.02.045-.045.045zM6.94 6.916h-.371a.045.045 0 0 1-.045-.045V6.5c0-.025.02-.045.045-.045h.371c.025 0 .045.02.045.045v.371c0 .025-.02.045-.045.045zM5.076 2.549h-.14a.045.045 0 0 1-.045-.045v-.14c0-.025.02-.045.045-.045h.14c.025 0 .045.02.045.045v.14c0 .025-.02.045-.045.045z"
+          />
+        </svg>
+        <svg
+          class="hero-bg-t"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 25 32"
+          fill="var(--accet-green)"
+        >
+          <path
+            d="M22.72 5.077h-.291a.036.036 0 0 1-.036-.036V4.75c0-.02.016-.036.036-.036h.291c.02 0 .036.016.036.036v.291c0 .02-.016.036-.036.036zM19.56.399h-.291a.036.036 0 0 1-.036-.036V.072c0-.02.016-.036.036-.036h.291c.02 0 .036.016.036.036v.291c0 .02-.016.036-.036.036zm.643 8.86h-.473a.036.036 0 0 1-.036-.036V8.75c0-.02.016-.036.036-.036h.473c.02 0 .036.016.036.036v.473c0 .02-.016.036-.036.036zm4.071-3.072h-.473a.036.036 0 0 1-.036-.036v-.473c0-.02.016-.036.036-.036h.473c.02 0 .036.016.036.036v.473c0 .02-.016.036-.036.036zm-4.25-3.363h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036zm5.036.725h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036zM16.717 8.73h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036zm-4.036 1.107h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036zm6.236-4.403h-.291a.036.036 0 0 1-.036-.036v-.291c0-.02.016-.036.036-.036h.291c.02 0 .036.016.036.036v.291c0 .02-.016.036-.036.036zm-1.464-3.431h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036zm-.59 23.36h-.291a.036.036 0 0 1-.036-.036v-.291c0-.02.016-.036.036-.036h.291c.02 0 .036.016.036.036v.291c0 .02-.016.036-.036.036zm-1.41-4.322h-.291a.036.036 0 0 1-.036-.036v-.291c0-.02.016-.036.036-.036h.291c.02 0 .036.016.036.036v.291c0 .02-.016.036-.036.036zm-1.108 8.503h-.473a.036.036 0 0 1-.036-.036v-.473c0-.02.016-.036.036-.036h.473c.02 0 .036.016.036.036v.473c0 .02-.016.036-.036.036zm4.072-3.071h-.473a.036.036 0 0 1-.036-.036v-.473c0-.02.016-.036.036-.036h.473c.02 0 .036.016.036.036v.473c0 .02-.016.036-.036.036zm-4.25-3.363h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036zm5.036.724h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036zm-8.343 5.181h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036zm-4.036 1.107h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036zm6.236-4.402h-.291a.036.036 0 0 1-.036-.036v-.291c0-.02.016-.036.036-.036h.291c.02 0 .036.016.036.036v.291c0 .02-.016.036-.036.036zm-1.465-3.431h-.11a.036.036 0 0 1-.036-.036v-.11c0-.02.016-.036.036-.036h.11c.02 0 .036.016.036.036v.11c0 .02-.016.036-.036.036z"
+          />
+        </svg>
+        <svg
+          class="hero-bg-d"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1216"
+          height="772"
+          viewBox="0 0 1216 772"
+          fill="var(--accet-green)"
+        >
+          <rect
+            x="493.16"
+            y="610.16"
+            width="10.1602"
+            height="10.1602"
+            rx="1"
+            transform="rotate(-180 493.16 610.16)"
+            fill="#00B068"
+          />
+          <rect
+            x="453.672"
+            y="489.16"
+            width="10.1602"
+            height="10.1602"
+            rx="1"
+            transform="rotate(-180 453.672 489.16)"
+            fill="#00B068"
+          />
+          <rect
+            x="422.672"
+            y="727.24"
+            width="15.2404"
+            height="15.2404"
+            rx="1"
+            transform="rotate(-180 422.672 727.24)"
+            fill="#00B068"
+          />
+          <rect
+            x="536.672"
+            y="641.24"
+            width="15.2404"
+            height="15.2404"
+            rx="1"
+            transform="rotate(-180 536.672 641.24)"
+            fill="#00B068"
+          />
+          <rect
+            x="417.672"
+            y="547.08"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 417.672 547.08)"
+            fill="#00B068"
+          />
+          <rect
+            x="558.672"
+            y="567.363"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 558.672 567.363)"
+            fill="#00B068"
+          />
+          <rect
+            x="325.08"
+            y="712.428"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 325.08 712.428)"
+            fill="#00B068"
+          />
+          <rect
+            x="212.082"
+            y="743.428"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 212.082 743.428)"
+            fill="#00B068"
+          />
+          <rect
+            x="386.672"
+            y="620.16"
+            width="10.1602"
+            height="10.1602"
+            rx="1"
+            transform="rotate(-180 386.672 620.16)"
+            fill="#00B068"
+          />
+          <rect
+            x="345.672"
+            y="524.08"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 345.672 524.08)"
+            fill="#00B068"
+          />
+          <rect
+            x="1149.16"
+            y="144.16"
+            width="10.1602"
+            height="10.1602"
+            rx="1"
+            transform="rotate(-180 1149.16 144.16)"
+            fill="#00B068"
+          />
+          <rect
+            x="1060.67"
+            y="13.1602"
+            width="10.1602"
+            height="10.1602"
+            rx="1"
+            transform="rotate(-180 1060.67 13.1602)"
+            fill="#00B068"
+          />
+          <rect
+            x="1078.67"
+            y="261.24"
+            width="15.2404"
+            height="15.2404"
+            rx="1"
+            transform="rotate(-180 1078.67 261.24)"
+            fill="#00B068"
+          />
+          <rect
+            x="1192.67"
+            y="175.24"
+            width="15.2404"
+            height="15.2404"
+            rx="1"
+            transform="rotate(-180 1192.67 175.24)"
+            fill="#00B068"
+          />
+          <rect
+            x="1073.67"
+            y="81.0801"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 1073.67 81.0801)"
+            fill="#00B068"
+          />
+          <rect
+            x="1214.67"
+            y="101.363"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 1214.67 101.363)"
+            fill="#00B068"
+          />
+          <rect
+            x="981.082"
+            y="246.426"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 981.082 246.426)"
+            fill="#00B068"
+          />
+          <rect
+            x="868.082"
+            y="277.426"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 868.082 277.426)"
+            fill="#00B068"
+          />
+          <rect
+            x="1042.67"
+            y="154.16"
+            width="10.1602"
+            height="10.1602"
+            rx="1"
+            transform="rotate(-180 1042.67 154.16)"
+            fill="#00B068"
+          />
+          <rect
+            x="1001.67"
+            y="58.0801"
+            width="5.08012"
+            height="5.08012"
+            rx="1"
+            transform="rotate(-180 1001.67 58.0801)"
+            fill="#00B068"
+          />
+        </svg>
+        <h1 class="hero-title">
+          Hello, I am <span class="accet">Fullstack developer</span>
+        </h1>
+        <picture>
+          <source
+            srcset="/js_115_sselesnes/assets/hero-dev-d-1x-DIAqHULn.webp, /js_115_sselesnes/assets/hero-dev-d-2x-CB-jSxWm.webp 2x"
+            width="108"
+            height="108"
+          />
+          <img
+            src="/js_115_sselesnes/assets/hero-dev-d-1x-DIAqHULn.webp"
+            alt="Small developer photo "
+          />
+        </picture>
+        <a class="hero-order-btn" href="#work-together">
+          <p class="hero-order-btn-text caption">
+            <svg
+              class="accet"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 60 32"
+              fill="none"
+            >
+              <path
+                d="M2 14a2 2 0 1 0 0 4v-4zm57.414 3.414a2 2 0 0 0 0-2.828L46.686 1.858a2 2 0 1 0-2.828 2.828L55.172 16 43.858 27.314a2 2 0 1 0 2.828 2.828l12.728-12.728zM2 18h56v-4H2v4z"
+              />
+            </svg>
+            Order the project
+          </p>
+          <span></span>
+        </a>
+        <p class="hero-description caption">
+          I work with people all over the world to create
+          <span class="accet">impressive</span> and
+          <span class="accet">functional websites</span> that reflect each
+          client’s unique personality.
+        </p>
+      </div>
+    </div>
+    <ul class="hero-social">
+      <li>
+        <a
+          href="https://www.instagram.com/goitclub/"
+          target="_blank"
+          aria-label="Instagram"
+          >Instagram</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com/goITclub/"
+          target="_blank"
+          aria-label="Facebook"
+          >Facebook</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/school/goit-start-your-career-in-it/"
+          target="_blank"
+          aria-label="LinkedIn"
+          >Linkedin</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/goitacademy"
+          target="_blank"
+          aria-label="GitHub"
+          >GitHub</a
+        >
+      </li>
+    </ul>
+  </section>
+</html>
+
+      <section class="container about-me" id="about-me">
+  <h2 class="about-me_title">About <span>me</span></h2>
+  <div class="about-me_info">
+    <picture
+      ><source
+        srcset="/js_115_sselesnes/assets/about-me_lloyd-jefferson_1x-_Jh2Mdz0.webp 1x, /js_115_sselesnes/assets/about-me_lloyd-jefferson_2x-Brmx8QoA.webp 2x"
+        type="image/webp"
+      />
+      <img
+        class="about-me_img"
+        src="/js_115_sselesnes/assets/about-me_lloyd-jefferson_2x-Brmx8QoA.webp"
+        alt="Lloyd Jefferson"
+        width="384"
+        height="448"
+        loading="lazy"
+        decoding="async"
+      />
+    </picture>
+    <div class="about-me_info-biography">
+      <h3 class="about-me_info-biography-title">BIO</h3>
+      <p class="about-me_info-biography-text">
+        I'm Lloyd Jefferson, a talented programmer specializing<br />
+        in software development. My expertise spans various programming
+        languages and technologies, and I am dedicated to continually enhancing
+        my skills. I thrive on seeking unconventional and creative solutions to
+        problems, leveraging a high level of analytical skills to effectively
+        tackle even the most challenging tasks.
+      </p>
+      <p class="about-me_info-biography-text">
+        Adaptable to both independent and team-oriented work, I collaborate
+        seamlessly with colleagues, exchanging ideas and finding optimal
+        solutions. My professional maturity enables me to navigate challenges
+        and stressful situations with a calm demeanor, maintaining a
+        consistently high quality of work. Committed to self-improvement, I
+        actively engage in studying new technologies and practices to stay
+        current with the latest innovations in the field.
+      </p>
+    </div>
+    <div class="about-me_info-education">
+      <h3 class="about-me_info-education-title">EDUCATION</h3>
+      <ul class="about-me_info-education-list">
+        <li class="about-me_info-education-list-item bulleted_list">
+          2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+        </li>
+        <li class="about-me_info-education-list-item bulleted_list">
+          2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
+          New York
+        </li>
+        <li class="about-me_info-education-list-item bulleted_list">
+          2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+        </li>
+      </ul>
+    </div>
+    <div class="about-me_info-role">
+      <h3 class="about-me_info-role-title">ROLE</h3>
+      <ul class="about-me_info-role-list">
+        <li class="about-me_info-role-list-item bulleted_list">
+          Frontend development
+        </li>
+        <li class="about-me_info-role-list-item bulleted_list">
+          HeadlessCMS, Wordpress
+        </li>
+        <li class="about-me_info-role-list-item bulleted_list">
+          Blender (enjoy)
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <section class="tech-skills" id="tech-skills">
+  <div class="container container-marquee">
+
+    <h2 class="visually-hidden">Tech Skills</h2>
+
+    <div class="marquee">
+      <div class="marquee-inner">
+      </div>
+    </div>
+    
+    <div class="marquee-rotate">
+      <div class="marquee-inner-rotate">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+      <section class="my-projects" id="my-projects">
+  <div class="container">
+    <h2 class="hedline-my-projects">
+      my&nbsp;<span class="hedline-span-my-project">projects</span>
+    </h2>
+    <ul class="gallery"></ul>
+    <button class="btn-load-more-my-project">
+      <span class="load-more-span-my-project">LOAD MORE</span>
+    </button>
+  </div>
+
+  <button id="scrollTopBtn" class="button-scroll-my-project" title="Go to top">
+    <svg class="svg-my-project" height="24" width="24">
+      <use class="svg-visit-my-project" href="#icon-arrow-up2"></use>
+    </svg>
+  </button>
+
+  <svg
+    class="svg-visit-my-project"
+    style="display: none"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+  >
+    <symbol id="icon-visit-arrow" viewBox="0 0 32 32">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="2.6667"
+        d="M6.333 25.667l19.333-19.333M25.667 6.333h-18M25.667 6.333v18"
+      />
+    </symbol>
+
+    <symbol id="icon-arrow-up2" viewBox="0 0 32 32">
+      <path
+        d="M21 28h-10c-0.552 0-1-0.448-1-1v-11h-4c-0.404 0-0.769-0.244-0.924-0.617s-0.069-0.804 0.217-1.090l10-10c0.391-0.39 1.024-0.39 1.414 0l10 10c0.286 0.286 0.372 0.716 0.217 1.090s-0.519 0.617-0.924 0.617h-4v11c0 0.552-0.448 1-1 1zM12 26h8v-11c0-0.552 0.448-1 1-1h2.586l-7.586-7.586-7.586 7.586h2.586c0.552 0 1 0.448 1 1v11z"
+      />
+    </symbol>
+  </svg>
+</section>
+
+<div class="floating-social-my-projects">
+  <a
+    href="https://www.instagram.com/goitclub/"
+    target="_blank"
+    aria-label="Instagram"
+  >
+    <svg class="social-icon-my-projects" width="24" height="24">
+      <symbol id="icon-instagram" viewBox="0 0 32 32">
+        <path
+          d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"
+        ></path>
+        <path
+          d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"
+        ></path>
+        <path
+          d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"
+        ></path>
+      </symbol>
+      <use href="#icon-instagram"></use>
+    </svg>
+  </a>
+  <a
+    href="https://www.facebook.com/goITclub/?locale=ru_RU"
+    target="_blank"
+    aria-label="Facebook"
+  >
+    <svg class="social-icon-my-projects" width="24" height="24">
+      <symbol id="icon-facebook" viewBox="0 0 32 32">
+        <path
+          d="M19 6h5V0h-5c-5 0-9 4-9 9v3H6v6h4v14h6V18h5l1-6h-6v-3c0-1 1-3 3-3z"
+        />
+      </symbol>
+      <use href="#icon-facebook"></use>
+    </svg>
+  </a>
+  <a
+    href="https://www.linkedin.com/school/goit-start-your-career-in-it/"
+    target="_blank"
+    aria-label="LinkedIn"
+  >
+    <svg class="social-icon-my-projects" width="24" height="24">
+      <symbol id="icon-linkedin" viewBox="0 0 32 32">
+        <path
+          d="M12 12h5v2h.1a6 6 0 0 1 5-2c5 0 6 3 6 7v9h-5v-8c0-2 0-5-3-5s-3 2-3 4v9h-5v-16zm-7 0h5v16H5v-16zm2.5-8a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+        />
+      </symbol>
+      <use href="#icon-linkedin"></use>
+    </svg>
+  </a>
+  <a href="https://github.com/goitacademy" target="_blank" aria-label="GitHub">
+    <svg class="social-icon-my-projects" width="24" height="24">
+      <symbol id="icon-github" viewBox="0 0 32 32">
+        <path
+          d="M16 0C7 0 0 7 0 16c0 7 4 12 9 14 1 0 1-1 1-2v-4c-4 1-5-1-5-1-1-1-2-2-2-3 0-1 1-1 2-1 2 0 3 1 4 2 2 3 5 2 6 2 0-1 1-2 2-2-3-1-6-1-6-6 0-1 0-3 1-4 0-1-1-3 1-5 0 0 1 0 2 1 1 0 2-1 3-1s2 1 3 1c1-1 2-1 2-1 2 2 1 4 1 5 1 1 1 3 1 4 0 5-3 5-6 6 1 1 2 2 2 4v5c0 1 0 2 1 2 5-2 9-7 9-14C32 7 25 0 16 0z"
+        />
+      </symbol>
+      <use href="#icon-github"></use>
+    </svg>
+  </a>
+</div>
+
+
+      <section class="benefits" id="benefits">
+  <div class="container benefits-container">
+    <h1 class="benefits-header"><span class="benefits-header-part">Benefits</span> of working with me</h1>
+    <svg class="benefits-decor decor-hidden" width="526" height="408">
+      <use href="/js_115_sselesnes/assets/benefits-DRE3YxBW.svg#icon-benefits-decor"></use>
+    </svg>
+    <ul class="benefits-list">
+      <li class="benefits-list-item">
+        <div class="benefits-icons-wrapper">
+          <svg class="benefits-icons" width="24" height="24">
+            <use href="/js_115_sselesnes/assets/benefits-DRE3YxBW.svg#icon-user"></use>
+          </svg>
+        </div>
+        <h3 class="benefits-subheader">Expertise</h3>
+        <p class="benefits-subheader-description">
+          With extensive experience in development, I have a deep understanding
+          of programming and website development.
+        </p>
+      </li>
+      <li class="benefits-list-item">
+        <div class="benefits-icons-wrapper"><svg class="benefits-icons" width="24" height="24">
+            <use href="/js_115_sselesnes/assets/benefits-DRE3YxBW.svg#icon-message-chat-circle"></use>
+          </svg></div>
+        <h3 class="benefits-subheader">Communication</h3>
+        <p class="benefits-subheader-description">
+          Understanding your needs and wants is my priority and I am always
+          available for discussions and open to corrections.
+        </p>
+      </li>
+      <li class="benefits-list-item">
+        <div class="benefits-icons-wrapper"><svg class="benefits-icons" width="24" height="24">
+            <use href="/js_115_sselesnes/assets/benefits-DRE3YxBW.svg#icon-brush"></use>
+          </svg></div>
+        <h3 class="benefits-subheader">Art</h3>
+        <p class="benefits-subheader-description">
+          Thanks to my creative nature, I am ready to accept challenges and help
+          you bring your ideas to life.
+        </p>
+      </li>
+      <li class="benefits-list-item">
+        <div class="benefits-icons-wrapper"><svg class="benefits-icons" width="24" height="24">
+            <use href="/js_115_sselesnes/assets/benefits-DRE3YxBW.svg#icon-hourglass"></use>
+          </svg></div>
+        <h3 class="benefits-subheader">Urgent execution</h3>
+        <p class="benefits-subheader-description">
+          I understand how important time is to you. Ready to work quickly and
+          efficiently, without reducing the quality of work.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+      <section class="faq" id="faq">
+  <div class="container faq-container">
+    <h2 class="faq-header">
+      frequently asked
+      <span class="faq-highlight">question</span>
+    </h2>
+    <div class="decor-background">
+      <svg width="520.592" height="406.244">
+        <use href="/js_115_sselesnes/assets/icons-Cf-Q7K4J.svg#group-67"></use>
+      </svg>
+    </div>
+
+    <div class="accordion-container">
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What programming languages are most often used in your project?
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="faq-ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What are the deadlines for the project?
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="faq-ac-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What payment methods do you accept?
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="faq-ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            How can I contact you?
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="faq-ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            Do you provide advice or support?
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="faq-ac-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What does the process of developing a software product look like
+            from idea to implementation?
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="faq-ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="container reviews" id="reviews">
+  <h2 class="reviews-title">reviews</h2>
+  <div class="swiper reviews-swiper">
+    <ul class="swiper-wrapper reviews-list">
+      <li class="swiper-slide reviews-list-item"></li>
+    </ul>
+    <div class="reviews-list-btns">
+      <button class="reviews-btn reviews-btn-left" type="button">
+        <svg class="reviews-left" width="40" height="40">
+          <use href="/js_115_sselesnes/assets/reviews-C-rO7G0s.svg#icon-arrow-narrow-left"></use>
+        </svg>
+      </button>
+      <button class="reviews-btn reviews-btn-right" type="button">
+        <svg class="reviews-right" width="40" height="40">
+          <use href="/js_115_sselesnes/assets/reviews-C-rO7G0s.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+      <section class="work-together" id="work-together">
+  <div class="container">
+    <div class="work-together-wraper">
+      <div class="left-side">
+        <h1>LET'S <span>WORK TOGETHER</span></h1>
+        <div class="contact-text">
+          CONTACT ME TO TRANSFORM YOUR IDEAS INTO EXCEPTIONAL SOLUTIONS.
+        </div>
+
+        <ul class="contact-info">
+          <li class="li-info-work">
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                stroke="#00B068"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+              />
+            </svg>
+            <span><a href="tel:+380984567890">+38 098 456 78 90</a></span>
+          </li>
+          <li class="li-info-work">
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                stroke="#00B068"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
+            </svg>
+            <span
+              ><a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=lloydjefferson@gmail.com"
+                href
+                target="_blank"
+                >lloydjefferson@gmail.com</a
+              ></span
+            >
+          </li>
+          <li class="li-info-work">
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g
+                stroke="#00B068"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0v0Z" />
+                <path
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0 1 15 0v0Z"
+                />
+              </g>
+            </svg>
+            <span
+              ><a
+                href="https://maps.app.goo.gl/PPNB9Ns66MCT58eX9"
+                href
+                target="_blank"
+                >USA, New York</a
+              ></span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="right-side">
+        <form class="form" id="contactForm">
+          <svg
+            class="form-email-valid"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <path
+              d="M16 0a15.997 15.997 0 0 1 16 16 16.003 16.003 0 0 1-16 16A16.003 16.003 0 0 1 0 16 16.003 16.003 0 0 1 16 0zm-1.993 19.157L10.453 15.6a1.362 1.362 0 0 0-.97-.401 1.37 1.37 0 0 0-1.372 1.371c0 .364.145.713.402.97l4.526 4.526a1.357 1.357 0 0 0 .971.404 1.38 1.38 0 0 0 .971-.404l9.371-9.374a1.366 1.366 0 0 0 .41-.972 1.368 1.368 0 0 0-.848-1.275 1.384 1.384 0 0 0-1.055.003c-.167.07-.318.173-.445.302l-8.405 8.405z"
+            />
+          </svg>
+          <input
+            type="text"
+            name="email"
+            placeholder="Your email*"
+            autocomplete="off"
+          />
+          <p class="form-email-error">Invalid email, try again</p>
+          <textarea
+            placeholder="Message"
+            name="message"
+            style="height: 128px"
+          ></textarea>
+          <p class="form-msg-error">Please write something useful for us</p>
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup -->
+<div class="popup-overlay visually-hidden" id="popupOverlay"></div>
+<div class="popup visually-hidden" id="popup">
+  <div class="popup-content">
+    <svg
+      class="popup-close"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      fill="none"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2.667"
+        d="M24 8 8 24M8 8l16 16"
+      />
+    </svg>
+    <h2 class="popup-title">OOPS! AN ERROR OCCURRED</h2>
+    <p class="popup-text">
+      Unfortunately, your message could not be sent right now. Please try again
+      later.
+    </p>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="footer" id="footer">
+  <div class="contact-section container">
+    <div class="sbornik">
+      <div class="lloydjefferson">
+        <b
+          >LLOYD<span style="color: var(--Accet-green, #00b068)"
+            >JEFFERSON.</span
+          ></b
+        >
+      </div>
+      <div class="social-links">
+        <div class="social-link-li">
+          <a href="https://www.instagram.com/goitclub/" target="_blank"
+            >Instagram</a
+          >
+        </div>
+        <div class="social-link-li">
+          <a
+            href="https://www.facebook.com/goITclub/?locale=ru_RU"
+            target="_blank"
+            >Facebook</a
+          >
+        </div>
+        <div class="social-link-li">
+          <a
+            href="https://www.linkedin.com/school/goit-start-your-career-in-it/"
+            target="_blank"
+            >Linkedin</a
+          >
+        </div>
+        <div class="social-link-li">
+          <a href="https://github.com/goitacademy" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-24">© Copyright 2025. Made by LloydJefferson</div>
+  </div>
+</footer>
+
+    <!-- Mobile Menu -->
+<div class="mobile-menu">
+  <div id="particles-js"></div>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="#about-me" class="nav-link">About me</a>
+      </li>
+      <li class="nav-item">
+        <a href="#my-projects" class="nav-link">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a href="#work-together" class="nav-link">Contacts</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  </body>
+</html>
